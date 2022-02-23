@@ -1,5 +1,5 @@
 ## Hi there 👋
-### I am BEAJ Ousama, Call me Obeaj !
+### I am BEAJ Ousama !
 
 - 🔭 I’m currently working on myOwnStuff
 - 🌱 I’m currently learning to code at 1337FIL
