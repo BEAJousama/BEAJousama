@@ -10,4 +10,4 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=BEAJousama&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 
-[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/obeaj)](https://github.com/JaeSeoKim/badge42)
+[![obeaj's 42 stats](https://badge42.vercel.app/api/v2/cl1mw1adn000609ky2y4rkx8r/stats?cursusId=21&coalitionId=73)](https://github.com/JaeSeoKim/badge42)
