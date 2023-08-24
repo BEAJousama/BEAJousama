@@ -45,6 +45,6 @@ I am currently working on some mini-projects to learn Java Spring and Angular...
 * [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](repo/kindel)
 * [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:oussama.beaj2@gmail.com)
 * [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/oussama_beaj)
-* [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)]([github.com/obeaj](https://github.com/Beodev)) : Here i share my kernel dev projects
+* [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)]([github.com/obeaj](https://github.com/Beodev)) Here i share my kernel dev projects
 
 
