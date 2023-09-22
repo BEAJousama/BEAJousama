@@ -9,11 +9,10 @@ I am learning to code at 1337 school part of 42 Network .
 ## 🔭 Current Projects
 I am currently working on some mini-projects to learn Java Spring and Angular...
 
-- [Kindel](https://github.com/BEAJousama/Kindel)
 - [Portfolio](https://github.com/BEAJousama/Portfolio)
-- [FT_TRANSCENDENCE](https://github.com/Hicham-BelHoucin/ft_transcendence)
-- [JavaTraining](https://github.com/BEAJousama/JavaPiscine )
+- [Kindel](https://github.com/BEAJousama/Kindel)
 - [Medicapp](https://github.com/BEAJousama/Medicapp)
+- [JavaTraining](https://github.com/BEAJousama/JavaPiscine )
 - [StreamingPlatform]()
 
 ## 🚀 Skills
