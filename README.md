@@ -13,6 +13,7 @@ I am currently working on some mini-projects to learn Java Spring and Angular...
 - [Portfolio](https://github.com/BEAJousama/Portfolio)
 - [FT_TRANSCENDENCE](https://github.com/Hicham-BelHoucin/ft_transcendence)
 - [JavaTraining](https://github.com/BEAJousama/JavaPiscine )
+- [Medicapp](https://github.com/BEAJousama/Medicapp)
 - [StreamingPlatform]()
 
 ## 🚀 Skills
