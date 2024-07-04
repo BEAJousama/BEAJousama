@@ -2,7 +2,7 @@
 #### I am BEAJ Ousama a Full Stack Developer, Network Engineer and a kernel dev enthusiast.
 
 ## 🌱 Studies
-I am learning to code at 1337 school part of 42 Network .
+I am learning to code at 1337 school | 42 Network .
 
 [![obeaj's 42 stats](https://badge.mediaplus.ma/binary/obeaj)](https://github.com/oakoudad/badge42)
 
