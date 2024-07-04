@@ -6,7 +6,7 @@ I am learning to code at 1337 school part of 42 Network .
 
 [![obeaj's 42 stats](https://badge.mediaplus.ma/binary/obeaj)](https://github.com/oakoudad/badge42)
 
-## 🔭 Current Projects
+<!--- ## 🔭 Current Projects
 I am currently working on some mini-projects to learn Java Spring and Angular...
 
 - [Portfolio](https://github.com/BEAJousama/Portfolio)
@@ -14,6 +14,7 @@ I am currently working on some mini-projects to learn Java Spring and Angular...
 - [Medicapp](https://github.com/BEAJousama/Medicapp)
 - [JavaTraining](https://github.com/BEAJousama/JavaPiscine )
 - [StreamingPlatform]()
+-->
 
 ## 🚀 Skills
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
