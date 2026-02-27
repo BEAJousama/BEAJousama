@@ -47,7 +47,5 @@ I am currently working on some mini-projects to learn Java Spring and Angular...
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:oussama.beaj2@gmail.com)
 
-[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/oussama_beaj)
-
-Here is another [Github Account](https://github.com/Beodev) where I share my kernel development learning journey and kernel projects.
+[![X](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/oussama_beaj)
 
