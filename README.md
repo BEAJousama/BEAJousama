@@ -20,32 +20,41 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 ---
 
-## 🚀 About Me
+## About Me
 
-- 🧠 Strong **CS fundamentals** (systems, networking, protocols)
-- ⚡ Building **real-time & scalable applications**
-- 🤖 Transitioning into **AI Engineering (LLMs, RAG, Vector DBs)**
-- 🌍 Based in Morocco — open to **remote opportunities**
+- Strong **CS fundamentals** (systems, networking, protocols)
+- Building **real-time & scalable applications**
+- Transitioning into **AI Engineering (LLMs, RAG, Vector DBs)**
+- Based in Morocco — open to **remote opportunities**
 
 ---
 
-## 🧩 Featured Projects
+## 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
+</p>
+
+---
+
+## Featured Projects
 
 ### 🟢 Fleming.Watch — Production Website
 > CMS-powered product website with performance-first architecture
 
-- ⚙️ Next.js + CMS
-- 🎯 Focus on UX, animations, maintainability  
-- 🌐 https://fleming.watch  
+- Next.js + CMS
+- Focus on UX, animations, maintainability
+
+🌐 https://fleming.watch  
 
 ---
 
 ### 🔴 Red Tetris — Real-time Multiplayer Game
 > Competitive Tetris with live battles & game mechanics
 
-- ⚡ WebSockets real-time engine  
-- 🧠 Game logic + matchmaking  
-- 🏆 Leaderboard system  
+- WebSockets real-time engine  
+- Game logic + matchmaking  
+- Leaderboard system  
 
 🌐 https://tetr.obeaj.me  
 💻 https://github.com/BEAJousama/red-tetris  
@@ -55,9 +64,9 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 ### 🟣 PongMasters — Fullstack Real-time Platform
 > Multi-user app with auth, chat, notifications, and game engine
 
-- 🧱 Next.js + NestJS  
-- 🔐 Auth system + chat + live updates  
-- 🎮 Browser game integration  
+- Next.js + NestJS  
+- Auth system + chat + live updates  
+- Browser game integration  
 
 🎥 https://youtu.be/sX8WaT4Rgtc  
 💻 https://github.com/BEAJousama/ft_transcendence  
@@ -68,8 +77,8 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 > Fullstack media app with external APIs & OAuth
 
 - 🐳 Dockerized environment  
-- 🔗 API integrations  
-- 🎬 Subtitle + media handling  
+- API integrations  
+- Subtitle + media handling  
 
 🎥 https://youtu.be/N-ohDCg3ij0  
 💻 https://github.com/LeetSaaS-s/HyperTube-Frontend  
@@ -79,15 +88,15 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 ### ⚫ WebServ — HTTP Server (C++)
 > Built from scratch to master HTTP & networking
 
-- 🌐 HTTP parsing  
-- ⚙️ CGI/PHP execution  
-- 🔌 Socket programming  
+- HTTP parsing  
+- CGI/PHP execution  
+- Socket programming  
 
 💻 https://github.com/BEAJousama/websrv  
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core
 ![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
@@ -103,7 +112,7 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 ---
 
-## 🤖 AI Journey
+## AI Journey
 
 ![LLMs](https://img.shields.io/badge/LLMs-7C3AED?style=flat-square)
 ![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-06B6D4?style=flat-square)
@@ -113,30 +122,22 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BEAJousama&show_icons=true&theme=tokyonight&hide_border=true" height="160"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BEAJousama&theme=tokyonight&hide_border=true" height="160"/>
+<p align="start gap-16 justify-between">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=BEAJousama&theme=github_dark" height="160"/>
+  <img src="https://streak-stats.demolab.com?user=BEAJousama&hide_border=true" height="160"/>
 </p>
 
 ---
 
-## 🐍 Contribution Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
-</p>
-
----
-
-## 🏫 42 Network
+## 1337 School | 42 Network
 
 [![obeaj's 42 stats](https://badge.mediaplus.ma/black/obeaj)](https://github.com/oakoudad/badge42)
 
 ---
 
-## 📬 Contact
+## Contact
 
 - 📧 **beajousama@gmail.com**
 - 🌐 https://obeaj.me
@@ -146,6 +147,6 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 <div align="center">
 
-### ⚡ “I build systems, not just interfaces.”
+### “I build systems, not just interfaces.”
 
 </div>
