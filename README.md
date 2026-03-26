@@ -1,99 +1,151 @@
 <div align="center">
 
-## Ousama Beaj (Obeaj)
-### Fullstack Engineer | AI‑Powered Applications
+# Ousama Beaj | obeaj
+### Fullstack Engineer → AI Engineer
 
-Building modern web products end‑to‑end (Next.js/TS) and actively shipping toward AI engineering (LLMs, RAG, Vector DBs).
+Building scalable web products & transitioning into AI systems (LLMs, RAG, real-time apps).
 
-[Portfolio](https://obeaj.me) · [Blog](https://blog.obeaj.me) · [GitHub](https://github.com/BEAJousama) · [Email](mailto:beajousama@gmail.com) · [LinkedIn](https://www.linkedin.com/in/ousama-beaj/)
+<p>
+  <a href="https://obeaj.me">Portfolio</a> •
+  <a href="https://blog.obeaj.me">Blog</a> •
+  <a href="https://github.com/BEAJousama">GitHub</a> •
+  <a href="mailto:beajousama@gmail.com">Email</a> •
+  <a href="https://www.linkedin.com/in/ousama-beaj/">LinkedIn</a>
+</p>
 
 <img src="https://img.shields.io/badge/Open%20to%20Work-00C853?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Location-Morocco%20%7C%20Remote-0A66C2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Remote%20Ready-0A66C2?style=for-the-badge" />
 
 </div>
 
 ---
 
-## Snapshot
-- **Strengths**: product delivery, real-time systems, strong CS fundamentals (networking/systems)
-- **Primary stack**: Next.js · React · TypeScript · Node.js · PostgreSQL · Docker
-- **AI/Data (in progress)**: LLMs · Prompt Engineering · RAG · LangChain (learning) · Vector Databases
+## 🚀 About Me
+
+- 🧠 Strong **CS fundamentals** (systems, networking, protocols)
+- ⚡ Building **real-time & scalable applications**
+- 🤖 Transitioning into **AI Engineering (LLMs, RAG, Vector DBs)**
+- 🌍 Based in Morocco — open to **remote opportunities**
 
 ---
 
-## Featured projects (most recruiter/tech-lead impact)
+## 🧩 Featured Projects
 
-### Fleming.Watch — Production client website (Live)
-CMS-powered Next.js product site with responsive UI and tailored animations. Led delivery end-to-end with a focus on performance, maintainability, and content workflows.  
-**Live**: https://fleming.watch
+### 🟢 Fleming.Watch — Production Website
+> CMS-powered product website with performance-first architecture
 
-### Red Tetris — Real-time multiplayer (Live)
-Retro Tetris-style game for solo training and real-time battles with rooms, modifiers (Stealth/Storm), leaderboard, and live opponent “spectra”.  
-**Live**: https://tetr.obeaj.me · **Code**: https://github.com/BEAJousama/red-tetris
-
-### PongMasters — Fullstack real-time app (Demo)
-Next.js + NestJS + WebSockets app with authentication, chat, notifications, and a browser-based Pong game—designed as a complete multi-user product.  
-**Demo**: https://youtu.be/sX8WaT4Rgtc · **Code**: https://github.com/BEAJousama/ft_transcendence
-
-### Leetube — Dockerized full-stack media platform (Demo)
-Full-stack TypeScript app with external API integrations, subtitle management, and OAuth. Dockerized for reproducible development and deployment workflows.  
-**Demo**: https://youtu.be/N-ohDCg3ij0 · **Code**: https://github.com/LeetSaaS-s/HyperTube-Frontend
-
-### WebServ — HTTP server from scratch (C++)
-Socket-based server with HTTP parsing, CGI/PHP execution, and static file serving—built to master protocol-level web fundamentals.  
-**Code**: https://github.com/BEAJousama/websrv
+- ⚙️ Next.js + CMS
+- 🎯 Focus on UX, animations, maintainability  
+- 🌐 https://fleming.watch  
 
 ---
 
-## Tech I use
-<p>
-  <img src="https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=fff" />
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=fff" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=fff" />
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=fff" />
-  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=fff" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=fff" />
-  <img src="https://img.shields.io/badge/WebSockets-0B5FFF?style=flat-square" />
+### 🔴 Red Tetris — Real-time Multiplayer Game
+> Competitive Tetris with live battles & game mechanics
+
+- ⚡ WebSockets real-time engine  
+- 🧠 Game logic + matchmaking  
+- 🏆 Leaderboard system  
+
+🌐 https://tetr.obeaj.me  
+💻 https://github.com/BEAJousama/red-tetris  
+
+---
+
+### 🟣 PongMasters — Fullstack Real-time Platform
+> Multi-user app with auth, chat, notifications, and game engine
+
+- 🧱 Next.js + NestJS  
+- 🔐 Auth system + chat + live updates  
+- 🎮 Browser game integration  
+
+🎥 https://youtu.be/sX8WaT4Rgtc  
+💻 https://github.com/BEAJousama/ft_transcendence  
+
+---
+
+### 🔵 Leetube — Dockerized Media Platform
+> Fullstack media app with external APIs & OAuth
+
+- 🐳 Dockerized environment  
+- 🔗 API integrations  
+- 🎬 Subtitle + media handling  
+
+🎥 https://youtu.be/N-ohDCg3ij0  
+💻 https://github.com/LeetSaaS-s/HyperTube-Frontend  
+
+---
+
+### ⚫ WebServ — HTTP Server (C++)
+> Built from scratch to master HTTP & networking
+
+- 🌐 HTTP parsing  
+- ⚙️ CGI/PHP execution  
+- 🔌 Socket programming  
+
+💻 https://github.com/BEAJousama/websrv  
+
+---
+
+## 🛠️ Tech Stack
+
+### Core
+![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+
+### Backend & Infra
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-0B5FFF?style=flat-square)
+
+---
+
+## 🤖 AI Journey
+
+![LLMs](https://img.shields.io/badge/LLMs-7C3AED?style=flat-square)
+![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-06B6D4?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-22C55E?style=flat-square)
+![LangChain](https://img.shields.io/badge/LangChain-F59E0B?style=flat-square)
+![Vector DB](https://img.shields.io/badge/Vector%20DBs-EF4444?style=flat-square)
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=BEAJousama&show_icons=true&theme=tokyonight&hide_border=true" height="160"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BEAJousama&theme=tokyonight&hide_border=true" height="160"/>
 </p>
 
 ---
 
-## AI / Data (in progress)
-<p>
-  <img src="https://img.shields.io/badge/LLMs-7C3AED?style=flat-square" />
-  <img src="https://img.shields.io/badge/Prompt%20Engineering-06B6D4?style=flat-square" />
-  <img src="https://img.shields.io/badge/RAG-22C55E?style=flat-square" />
-  <img src="https://img.shields.io/badge/LangChain%20(learning)-F59E0B?style=flat-square" />
-  <img src="https://img.shields.io/badge/Vector%20Databases-EF4444?style=flat-square" />
+## 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
 
-## GitHub stats
-> If these don’t show in your editor preview, it’s normal. They render on GitHub.
+## 🏫 42 Network
 
-<p>
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=BEAJousama&show_icons=true&theme=transparent&cache_seconds=86400" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=BEAJousama&layout=compact&theme=transparent&langs_count=8&cache_seconds=86400" />
-</p>
+[![obeaj's 42 stats](https://badge.mediaplus.ma/black/obeaj)](https://github.com/oakoudad/badge42)
 
 ---
 
-## Contribution snake (game)
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution snake" src="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/github-contribution-grid-snake.svg">
-</picture>
+## 📬 Contact
+
+- 📧 **beajousama@gmail.com**
+- 🌐 https://obeaj.me
+- 💼 https://www.linkedin.com/in/ousama-beaj/
 
 ---
 
-## Contact
-- Email: **beajousama@gmail.com**
-- Portfolio: https://obeaj.me
-- Blog: https://blog.obeaj.me
-- LinkedIn: https://www.linkedin.com/in/ousama-beaj/
+<div align="center">
 
-[![obeaj's 42 stats](https://badge.mediaplus.ma/binary/obeaj)](https://github.com/oakoudad/badge42)
+### ⚡ “I build systems, not just interfaces.”
 
+</div>
