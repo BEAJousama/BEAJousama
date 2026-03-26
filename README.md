@@ -37,6 +37,37 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 ---
 
+## Tech Stack
+
+### Core
+![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+
+### Backend & Infra
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-0B5FFF?style=flat-square)
+
+---
+
+## 1337 School | 42 Network
+
+[![obeaj's 42 stats](https://badge.mediaplus.ma/black/obeaj)](https://github.com/oakoudad/badge42)
+
+---
+
+## GitHub Stats
+
+<p align="start gap-16 justify-between">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=BEAJousama&theme=github_dark" height="160"/>
+  <img src="https://streak-stats.demolab.com?user=BEAJousama&hide_border=true" height="160"/>
+</p>
+
+---
+
 ## Featured Projects
 
 ### 🟢 Fleming.Watch — Production Website
@@ -96,22 +127,6 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 
 ---
 
-## Tech Stack
-
-### Core
-![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
-
-### Backend & Infra
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![WebSockets](https://img.shields.io/badge/WebSockets-0B5FFF?style=flat-square)
-
----
-
 ## AI Journey
 
 ![LLMs](https://img.shields.io/badge/LLMs-7C3AED?style=flat-square)
@@ -119,21 +134,6 @@ Building scalable web products & transitioning into AI systems (LLMs, RAG, real-
 ![RAG](https://img.shields.io/badge/RAG-22C55E?style=flat-square)
 ![LangChain](https://img.shields.io/badge/LangChain-F59E0B?style=flat-square)
 ![Vector DB](https://img.shields.io/badge/Vector%20DBs-EF4444?style=flat-square)
-
----
-
-## GitHub Stats
-
-<p align="start gap-16 justify-between">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=BEAJousama&theme=github_dark" height="160"/>
-  <img src="https://streak-stats.demolab.com?user=BEAJousama&hide_border=true" height="160"/>
-</p>
-
----
-
-## 1337 School | 42 Network
-
-[![obeaj's 42 stats](https://badge.mediaplus.ma/black/obeaj)](https://github.com/oakoudad/badge42)
 
 ---
 
