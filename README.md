@@ -1,51 +1,75 @@
-## Hi there 👋
-#### I am BEAJ Ousama a Full Stack Developer, Network Engineer and a kernel dev enthusiast.
 
-## 🌱 Studies
-I am learning to code at 1337 school | 42 Network .
+
+
+<div align="center">
+
+## Ousama Beaj (Obeaj)
+**Fullstack Engineer | AI‑Powered Applications**
+
+I build modern web products end-to-end and I’m currently leveling up on AI engineering (LLMs, Prompt Engineering, RAG, LangChain, Vector DBs).
+
+[Portfolio](https://obeaj.me) · [Blog](https://blog.obeaj.me) · [Red Tetris](https://tetr.obeaj.me) · [GitHub](https://github.com/BEAJousama)
+
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+
+</div>
+
+---
+
+## Focus
+- **Fullstack**: Next.js, React, TypeScript, Node.js
+- **AI / Data (in progress)**: LLMs, Prompt Engineering, RAG, LangChain (learning), Vector Databases
+- **Systems/Networking background**: strong fundamentals from low-level + networking projects
+
+---
+
+## Featured
+
+### Fleming.Watch — Production client website (deployed)
+Led end-to-end development of a CMS-powered Next.js product site with responsive UI and tailored animations. Shipped a fast, maintainable experience that improved product storytelling and content workflows.
+- Live: https://fleming.watch
+### Red Tetris — Real-time multiplayer Tetris (deployed)
+Retro Tetris-style game with solo training and real-time battles, rooms, and gameplay modifiers (Stealth/Storm). Includes leaderboard progression and live opponent “spectra”.
+- Live: https://tetr.obeaj.me
+- Code: https://github.com/BEAJousama/red-tetris
+### PongMasters — Fullstack real-time web app
+Next.js + NestJS + WebSockets app with authentication, chat, notifications, and a browser-based Pong game. Designed as a complete multi-user product with low-latency gameplay.
+- Demo: https://youtu.be/sX8WaT4Rgtc
+- Code: https://github.com/BEAJousama/ft_transcendence
+### Leetube — Dockerized full-stack media platform
+Full-stack TypeScript app with external movie/torrent API integrations, subtitle management, and OAuth-based access. Packaged with Docker for reproducible local/dev environments.
+- Demo: https://youtu.be/N-ohDCg3ij0
+- Code: https://github.com/LeetSaaS-s/HyperTube-Frontend
+### WebServ — HTTP server from scratch (C++)
+Implemented an HTTP server with socket-based networking, manual HTTP parsing, CGI/PHP execution, and static file serving. A focused project on web fundamentals, robustness, and protocol-level understanding.
+- Code: https://github.com/BEAJousama/websrv
+### KFS — Minimal x86 kernel (optional)
+Built a minimal kernel with custom boot flow, GDT/IDT setup, interrupts, a basic shell, and terminal I/O. Demonstrates strong low-level fundamentals and systems debugging.
+- Code: https://github.com/BEAJousama/kfs_2
+
+---
+
+## What I’m building next
+- Shipping a small **RAG demo** (search + citations) with evals and a clean UX
+- Turning more projects into **case studies** (problem → approach → results)
+
+---
+
+## Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=BEAJousama&show_icons=true&theme=transparent&cache_seconds=86400)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=BEAJousama&layout=compact&theme=transparent&langs_count=8&cache_seconds=86400)
+
+---
 
 [![obeaj's 42 stats](https://badge.mediaplus.ma/binary/obeaj)](https://github.com/oakoudad/badge42)
 
-<!--- ## 🔭 Current Projects
-I am currently working on some mini-projects to learn Java Spring and Angular...
 
-- [Portfolio](https://github.com/BEAJousama/Portfolio)
-- [Kindel](https://github.com/BEAJousama/Kindel)
-- [Medicapp](https://github.com/BEAJousama/Medicapp)
-- [JavaTraining](https://github.com/BEAJousama/JavaPiscine )
-- [StreamingPlatform]()
--->
-
-## 🚀 Skills
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
-![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
-![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
-![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)
-![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
-![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black)
-
-## 📫 Reach me
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ousama-b-a8a84a247)
-
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:oussama.beaj2@gmail.com)
-
-[![X](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/oussama_beaj)
-
+## Contact
+- **Portfolio**: https://obeaj.me  
+- **Blog**: https://blog.obeaj.me  
+- **Email**: beajousama@gmail.com  
+- **LinkedIn**: https://www.linkedin.com/in/ousama-beaj/
