@@ -6,11 +6,14 @@
       <stop offset="0" stop-color="#0b0f17"/>
       <stop offset="1" stop-color="#05070c"/>
     </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
-      <stop offset=".5" stop-color="#22d3ee" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="prog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3fb950"/>
     </linearGradient>
+    <radialGradient id="vig" cx=".5" cy=".55" r=".75">
+      <stop offset=".6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".45"/>
+    </radialGradient>
     <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
       <rect width="4" height="2" fill="#ffffff" fill-opacity=".018"/>
     </pattern>
@@ -32,23 +35,32 @@
     .l7 { animation-delay: 4.0s; } .l8 { animation-delay: 4.8s; } .l9 { animation-delay: 5.6s; }
     .cursor { opacity: 0; animation: blink 1s 5.7s step-end infinite; }
     @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
-    .sweep { animation: sweep 6s 6.2s ease-in-out infinite; }
-    @keyframes sweep { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: .35; } 90% { opacity: .35; } 100% { transform: translateY(300px); opacity: 0; } }
-    .bar { transform-origin: 0 0; transform: scaleX(0); animation: fill 5.2s .3s cubic-bezier(.4,0,.2,1) forwards; }
+    .bar { transform-origin: 0 0; transform: scaleX(0); animation: fill 5.3s .3s cubic-bezier(.4,0,.2,1) forwards, settle .8s 5.8s ease-out forwards; }
     @keyframes fill { to { transform: scaleX(1); } }
+    @keyframes settle { from { opacity: 1; } to { opacity: .45; } }
+    .booting { animation: out .4s 5.6s forwards; }
+    .ready   { opacity: 0; animation: in2 .4s 5.8s forwards; }
+    @keyframes out { to { opacity: 0; } }
+    @keyframes in2 { to { opacity: 1; } }
+    .online  { opacity: 0; animation: in2 .4s 5.8s forwards; }
+    .dot     { animation: pulse 2s 6.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+    .on { font-size: 12px; fill: #3fb950; }
   </style>
 
   <g clip-path="url(#win)">
     <rect width="880" height="360" fill="url(#bg)"/>
     <rect width="880" height="360" fill="url(#scan)"/>
+    <rect width="880" height="360" fill="url(#vig)"/>
     <!-- title bar -->
     <rect width="880" height="38" fill="#161b22"/>
     <circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
-    <text x="440" y="24" text-anchor="middle" class="title">obeaj@1337 — tty1 — booting obeaj-os</text>
+    <text x="440" y="24" text-anchor="middle" class="title booting">obeaj@1337 — tty1 — booting obeaj-os…</text>
+    <text x="440" y="24" text-anchor="middle" class="title ready">obeaj@1337 — tty1 — obeaj-os ready</text>
+    <g class="online"><circle class="dot" cx="806" cy="19" r="4" fill="#3fb950"/><text x="816" y="23" class="on">online</text></g>
     <!-- boot progress -->
     <rect x="0" y="38" width="880" height="2" fill="#21262d"/>
-    <rect class="bar" x="0" y="38" width="880" height="2" fill="url(#glow)"/>
-    <rect class="sweep" x="0" y="40" width="880" height="18" fill="url(#glow)" opacity="0"/>
+    <rect class="bar" x="0" y="38" width="880" height="2" fill="url(#prog)"/>
 
     <text class="l l1" x="28" y="76"><tspan class="dim">obeaj-os 20.43 (i386) · grub: booting kernel… </tspan><tspan class="cy">Ousama Beaj</tspan><tspan class="dim"> · software engineer</tspan></text>
     <text class="l l2" x="28" y="108"><tspan class="dim">[</tspan><tspan class="ok">  OK  </tspan><tspan class="dim">] </tspan>Loaded GDT, IDT and IRQ handlers <tspan class="dim">· wrote this kernel from scratch</tspan></text>
