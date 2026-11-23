@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="162" viewBox="0 0 430 162" role="img" aria-label="BADASS: BGP-EVPN / VXLAN data-center network with route reflection.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0f17"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a371f7"/><stop offset="1" stop-color="#a371f7" stop-opacity="0"/></linearGradient>
+    <clipPath id="c"><rect x="1" y="1" width="428" height="160" rx="12"/></clipPath>
+  </defs>
+  <style>
+    .title { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 17px; font-weight: 700; fill: #f0f6fc; }
+    .tilde { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 17px; fill: #a371f7; }
+    .desc  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13.5px; fill: #9da7b3; }
+    .chip  { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 11.5px; fill: #a371f7; }
+    .foot  { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 12px; fill: #6e7681; }
+    .live  { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 11px; font-weight: 700; fill: #3fb950; }
+    .pulse { animation: p 1.6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes p { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+    .glow { animation: g 4s ease-in-out infinite; }
+    @keyframes g { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+  </style>
+  <g clip-path="url(#c)">
+    <rect width="430" height="162" fill="url(#bg)"/>
+    <rect class="glow" width="430" height="3" fill="url(#ac)"/>
+    <circle cx="400" cy="192" r="110" fill="#a371f7" fill-opacity=".05"/>
+    <text x="24" y="40"><tspan class="tilde">~/</tspan><tspan class="title">BADASS</tspan></text>
+    
+    <text x="24" y="70" class="desc">BGP-EVPN / VXLAN data-center network with route</text><text x="24" y="90" class="desc">reflection.</text>
+    <rect x="24" y="102" width="39" height="22" rx="11" fill="#a371f7" fill-opacity=".12" stroke="#a371f7" stroke-opacity=".35"/><text x="43.5" y="117" text-anchor="middle" class="chip">BGP</text><rect x="71" y="102" width="54" height="22" rx="11" fill="#a371f7" fill-opacity=".12" stroke="#a371f7" stroke-opacity=".35"/><text x="98.0" y="117" text-anchor="middle" class="chip">VXLAN</text><rect x="133" y="102" width="61" height="22" rx="11" fill="#a371f7" fill-opacity=".12" stroke="#a371f7" stroke-opacity=".35"/><text x="163.5" y="117" text-anchor="middle" class="chip">Docker</text>
+    <line x1="24" y1="136" x2="406" y2="136" stroke="#21262d"/>
+    <text x="24" y="152" class="foot">GNS3 · FRRouting</text>
+    <text x="406" y="152" text-anchor="end" class="foot" style="fill:#a371f7">›</text>
+  </g>
+  <rect x=".5" y=".5" width="429" height="161" rx="12" fill="none" stroke="#30363d"/>
+</svg>

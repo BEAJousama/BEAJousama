@@ -25,23 +25,31 @@
 
 ### Featured projects
 
-| Project | What it is | Stack | Links |
-|---|---|---|---|
-| **[PongMasters](https://github.com/BEAJousama/pongmasters)** | Real-time multiplayer Pong + chat platform. I owned the chat system and took the app to production. | Next.js · NestJS · Socket.IO · Prisma · PostgreSQL | [Live](https://pongmasters.obeaj.me) · [Video](https://youtu.be/sX8WaT4Rgtc) |
-| **[Leetube](https://github.com/BEAJousama/Leetube)** | Streams films from BitTorrent while they download (HTTP range responses, on-the-fly remux with FFmpeg), OAuth 42/Google. | React · Express · Prisma · PostgreSQL · FFmpeg | [Live](https://leetube.obeaj.me) · [Video](https://youtu.be/N-ohDCg3ij0) |
-| **[Red Tetris](https://github.com/BEAJousama/red-tetris)** | Multiplayer Tetris with an authoritative game server: every board runs server-side, shared seed per round. | React · TypeScript · Socket.IO | [Live](https://tetris.obeaj.me) |
-| **[MoralAi](https://github.com/BEAJousama/MoralAi)** | Workplace mental-health check-in companion with LLM chat and assessments (Gemini or local Llama). | React · Node.js · Ollama · Gemini | |
+<p align="center">
+  <a href="https://github.com/BEAJousama/pongmasters"><img src="assets/cards/pongmasters.svg" width="49%" alt="PongMasters: real-time Pong and chat platform, live"/></a>
+  <a href="https://github.com/BEAJousama/Leetube"><img src="assets/cards/leetube.svg" width="49%" alt="Leetube: torrent streaming platform, live"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/BEAJousama/red-tetris"><img src="assets/cards/red-tetris.svg" width="49%" alt="Red Tetris: multiplayer Tetris, live"/></a>
+  <a href="https://github.com/BEAJousama/MoralAi"><img src="assets/cards/moralai.svg" width="49%" alt="MoralAi: LLM mental-health check-in companion"/></a>
+</p>
 
 ### Systems, infrastructure & security
 
-| Project | What it is |
-|---|---|
-| **[kfs_2](https://github.com/BEAJousama/kfs_2)** · **[kfs_3](https://github.com/BEAJousama/kfs_3)** | i386 kernel from scratch: GDT, IDT, IRQ handlers, keyboard driver, debug shell, then paging, physical frame allocator and `kmalloc`/`vmalloc` heaps (C, NASM) |
-| **[rainfall](https://github.com/BEAJousama/rainfall)** · **[override](https://github.com/BEAJousama/override)** | Binary exploitation & reverse engineering: stack overflows, format strings, shellcode, ROP, with writeups |
-| **[beaj-shell](https://github.com/BEAJousama/beaj-shell)** | Unix shell in C: lexer → parser → executor, pipes, redirections, heredocs |
-| **[websrv](https://github.com/BEAJousama/websrv)** | HTTP/1.1 server in C++98 on a single `poll()` loop, chunked requests, CGI (team of 3) |
-| **[BADASS](https://github.com/BEAJousama/BADASS)** | BGP-EVPN / VXLAN data-center network in GNS3 with FRRouting |
-| **[inception](https://github.com/BEAJousama/inception)** · **[Cloud-I](https://github.com/BEAJousama/Cloud-I)** | Docker Compose infrastructure from my own images; Ansible provisioning on DigitalOcean |
+<p align="center">
+  <a href="https://github.com/BEAJousama/kfs_3"><img src="assets/cards/kfs.svg" width="49%" alt="Kernel from scratch (kfs_2, kfs_3)"/></a>
+  <a href="https://github.com/BEAJousama/rainfall"><img src="assets/cards/rainfall.svg" width="49%" alt="rainfall and override: binary exploitation"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/BEAJousama/beaj-shell"><img src="assets/cards/beaj-shell.svg" width="49%" alt="beaj-shell: Unix shell in C"/></a>
+  <a href="https://github.com/BEAJousama/websrv"><img src="assets/cards/websrv.svg" width="49%" alt="websrv: HTTP server in C++"/></a>
+</p>
+<p align="center">
+  <a href="https://github.com/BEAJousama/BADASS"><img src="assets/cards/badass.svg" width="49%" alt="BADASS: BGP-EVPN / VXLAN network"/></a>
+  <a href="https://github.com/BEAJousama/inception"><img src="assets/cards/inception.svg" width="49%" alt="inception and Cloud-I: Docker and Ansible infrastructure"/></a>
+</p>
+
+<p align="center"><sub>More: <a href="https://github.com/BEAJousama/kfs_2">kfs_2</a> · <a href="https://github.com/BEAJousama/override">override</a> · <a href="https://github.com/BEAJousama/Cloud-I">Cloud-I</a> · <a href="https://github.com/BEAJousama/cv-builder">cv-builder</a> · <a href="https://github.com/BEAJousama/miniRT">miniRT</a> · <a href="https://github.com/BEAJousama/ft_containers">ft_containers</a></sub></p>
 
 ---
 
