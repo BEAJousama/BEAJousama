@@ -36,7 +36,7 @@
 
 | Project | What it is |
 |---|---|
-| **[kfs_2](https://github.com/BEAJousama/kfs_2)** | i386 kernel from scratch: GDT, IDT, IRQ handlers, keyboard driver, debug shell (C, NASM) |
+| **[kfs_2](https://github.com/BEAJousama/kfs_2)** · **[kfs_3](https://github.com/BEAJousama/kfs_3)** | i386 kernel from scratch: GDT, IDT, IRQ handlers, keyboard driver, debug shell, then paging, physical frame allocator and `kmalloc`/`vmalloc` heaps (C, NASM) |
 | **[rainfall](https://github.com/BEAJousama/rainfall)** · **[override](https://github.com/BEAJousama/override)** | Binary exploitation & reverse engineering: stack overflows, format strings, shellcode, ROP, with writeups |
 | **[beaj-shell](https://github.com/BEAJousama/beaj-shell)** | Unix shell in C: lexer → parser → executor, pipes, redirections, heredocs |
 | **[websrv](https://github.com/BEAJousama/websrv)** | HTTP/1.1 server in C++98 on a single `poll()` loop, chunked requests, CGI (team of 3) |
