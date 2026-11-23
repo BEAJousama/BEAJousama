@@ -15,13 +15,7 @@
 
 ---
 
-### About
-
-- **1.3 years of production experience** at [FutureCorp](https://futurecorp.paris) (digital studio, Paris, remote): main engineer on CMS-driven Next.js platforms for brands like **Beige Pill** and **Fleming Watch**, maintainer on sites for **Saatchi & Saatchi UK** and **The Brooklyn Tower**.
-- **Final year at 1337 (42 Network)**, level 20, RNCP level 7 (master's level). I went deep on the layers underneath: an x86 kernel, a Unix shell, an HTTP server, binary exploitation, BGP-EVPN networks, Kubernetes with GitOps.
-- I build full-stack systems end to end and **run them myself in production** on cloud VMs (Caddy/Nginx, TLS, Docker).
-
----
+<img src="assets/cards/about.svg" width="100%" alt="About: 16 months of production experience at FutureCorp Paris (Beige Pill, Fleming Watch, Saatchi & Saatchi UK, The Brooklyn Tower). Final year at 1337 / 42 Network, level 20.43, RNCP 7: x86 kernel, Unix shell, HTTP server, binary exploitation, BGP-EVPN, Kubernetes. Builds full-stack systems and runs them in production."/>
 
 ### Featured projects
 
