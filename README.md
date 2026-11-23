@@ -1,12 +1,15 @@
 <div align="center">
 
-# Ousama Beaj
+<img src="assets/boot.svg" width="100%" alt="obeaj-os boot log: Ousama Beaj, software engineer, 1337 / 42 Network, fullstack and systems, looking for a 6-month PFE internship" />
 
-### Software Engineer · Fullstack (TypeScript, Next.js, NestJS) · Systems & Security background
+<br/>
 
-**🎯 Looking for a 6-month PFE internship (end-of-studies) — remote or on-site, available now**
+<a href="https://obeaj.me"><img src="https://img.shields.io/badge/Portfolio-obeaj.me-22d3ee?style=for-the-badge&labelColor=0b0f17" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/ousama-beaj/"><img src="https://img.shields.io/badge/LinkedIn-ousama--beaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0b0f17" alt="LinkedIn"/></a>
+<a href="mailto:ousama@obeaj.me"><img src="https://img.shields.io/badge/Email-ousama%40obeaj.me-3fb950?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=0b0f17" alt="Email"/></a>
+<a href="https://blog.obeaj.me"><img src="https://img.shields.io/badge/Blog-blog.obeaj.me-f778ba?style=for-the-badge&labelColor=0b0f17" alt="Blog"/></a>
 
-[Portfolio](https://obeaj.me) · [LinkedIn](https://www.linkedin.com/in/ousama-beaj/) · [Blog](https://blog.obeaj.me) · [ousama@obeaj.me](mailto:ousama@obeaj.me)
+**🎯 Looking for a 6-month PFE internship — remote or on-site, available now**
 
 </div>
 
@@ -44,9 +47,22 @@
 
 ### Tech
 
-**Languages** TypeScript, JavaScript, C, C++, SQL, Bash
-**Web** React, Next.js, Tailwind CSS, Node.js, NestJS, Express, Socket.IO, PostgreSQL, Prisma, Redis
-**Infra** Linux, Docker, Kubernetes (K3s), Argo CD, Nginx, Caddy, GitLab CI/CD, Vercel
-**Systems** POSIX, sockets, processes, threads, TCP/IP, HTTP/1.1, gdb
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,nodejs,nestjs,express,postgres,prisma,redis&perline=11" alt="TypeScript, JavaScript, React, Next.js, Tailwind, Node.js, NestJS, Express, PostgreSQL, Prisma, Redis"/>
+  <br/>
+  <img src="https://skillicons.dev/icons?i=c,cpp,bash,linux,docker,kubernetes,nginx,ansible,gitlab,vercel,git&perline=11" alt="C, C++, Bash, Linux, Docker, Kubernetes, Nginx, Ansible, GitLab, Vercel, Git"/>
+</p>
 
 English (professional) · French (fluent) · Arabic (native)
+
+---
+
+<img src="assets/42.svg" width="100%" alt="1337 Coding School, 42 Network: level 20.43, common core 100%, RNCP level 7"/>
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake.svg" />
+  <img alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake-dark.svg" width="100%" />
+</picture>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="150" viewBox="0 0 880 150" role="img" aria-labelledby="t d">
+  <title id="t">1337 / 42 Network</title>
+  <desc id="d">1337 Coding School, 42 Network. Level 20.43 of 21, common core 100%, RNCP level 7 (master's level).</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f17"/><stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="lvl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00babc"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <clipPath id="c"><rect x="1" y="1" width="878" height="148" rx="14"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #c9d1d9; }
+    .big { font-size: 56px; font-weight: 800; fill: #f0f6fc; letter-spacing: -2px; }
+    .h { font-size: 18px; font-weight: 700; fill: #f0f6fc; }
+    .s { font-size: 13px; fill: #8b949e; }
+    .lv { font-size: 13px; font-weight: 700; fill: #0b0f17; }
+    .tag { font-size: 12px; fill: #00babc; }
+    .fill { transform-origin: 0 0; transform: scaleX(0); animation: grow 2.2s .4s cubic-bezier(.2,.8,.2,1) forwards; }
+    @keyframes grow { to { transform: scaleX(1); } }
+    .shine { animation: shine 3s 2.8s ease-in-out infinite; }
+    @keyframes shine { from { transform: translateX(-80px); } to { transform: translateX(640px); } }
+  </style>
+  <g clip-path="url(#c)">
+    <rect width="880" height="150" fill="url(#bg)"/>
+    <!-- left block -->
+    <rect x="0" y="0" width="150" height="150" fill="#00babc" fill-opacity=".08"/>
+    <text x="75" y="92" text-anchor="middle" class="big">42</text>
+    <text x="75" y="118" text-anchor="middle" class="tag">1337 · MOROCCO</text>
+    <rect x="150" y="0" width="1" height="150" fill="#30363d"/>
+
+    <text x="180" y="42" class="h">1337 Coding School · 42 Network</text>
+    <text x="180" y="64" class="s">RNCP level 7 (master's level) · common core 100% · final year</text>
+
+    <!-- level bar -->
+    <rect x="180" y="86" width="660" height="26" rx="6" fill="#21262d"/>
+    <g>
+      <rect class="fill" x="180" y="86" width="641" height="26" rx="6" fill="url(#lvl)"/>
+      <clipPath id="b"><rect x="180" y="86" width="641" height="26" rx="6"/></clipPath>
+      <g clip-path="url(#b)"><rect class="shine" x="180" y="86" width="60" height="26" fill="#ffffff" fill-opacity=".18"/></g>
+    </g>
+    <text x="510" y="104" text-anchor="middle" class="lv">level 20 — 43%</text>
+    <text x="180" y="134" class="s">C · C++ · Unix · kernel · networks · security · web · DevOps</text>
+  </g>
+  <rect x=".5" y=".5" width="879" height="149" rx="14" fill="none" stroke="#30363d"/>
+</svg>
