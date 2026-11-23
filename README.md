@@ -1,152 +1,52 @@
 <div align="center">
 
-# Ousama Beaj | obeaj
-### Fullstack Engineer → AI Engineer
+# Ousama Beaj
 
-Building scalable web products & transitioning into AI systems (LLMs, RAG, real-time apps).
+### Software Engineer · Fullstack (TypeScript, Next.js, NestJS) · Systems & Security background
 
-<p>
-  <a href="https://obeaj.me">Portfolio</a> •
-  <a href="https://blog.obeaj.me">Blog</a> •
-  <a href="https://github.com/BEAJousama">GitHub</a> •
-  <a href="mailto:beajousama@gmail.com">Email</a> •
-  <a href="https://www.linkedin.com/in/ousama-beaj/">LinkedIn</a>
-</p>
+**🎯 Looking for a 6-month PFE internship (end-of-studies) — remote or on-site, available now**
 
-<img src="https://img.shields.io/badge/Open%20to%20Work-00C853?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Remote%20Ready-0A66C2?style=for-the-badge" />
+[Portfolio](https://obeaj.me) · [LinkedIn](https://www.linkedin.com/in/ousama-beaj/) · [Blog](https://blog.obeaj.me) · [ousama@obeaj.me](mailto:ousama@obeaj.me)
 
 </div>
 
 ---
 
-## About Me
+### About
 
-- Strong **CS fundamentals** (systems, networking, protocols)
-- Building **real-time & scalable applications**
-- Transitioning into **AI Engineering (LLMs, RAG, Vector DBs)**
-- Based in Morocco — open to **remote opportunities**
-
----
-
-## 🐍 Contribution Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" />
-</p>
+- **1.3 years of production experience** at [FutureCorp](https://futurecorp.paris) (digital studio, Paris, remote): main engineer on CMS-driven Next.js platforms for brands like **Beige Pill** and **Fleming Watch**, maintainer on sites for **Saatchi & Saatchi UK** and **The Brooklyn Tower**.
+- **Final year at 1337 (42 Network)**, level 20, RNCP level 7 (master's level). I went deep on the layers underneath: an x86 kernel, a Unix shell, an HTTP server, binary exploitation, BGP-EVPN networks, Kubernetes with GitOps.
+- I build full-stack systems end to end and **run them myself in production** on cloud VMs (Caddy/Nginx, TLS, Docker).
 
 ---
 
-## Tech Stack
+### Featured projects
 
-### Core
-![Next.js](https://img.shields.io/badge/Next.js-000?style=flat-square&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+| Project | What it is | Stack | Links |
+|---|---|---|---|
+| **[PongMasters](https://github.com/BEAJousama/pongmasters)** | Real-time multiplayer Pong + chat platform. I owned the chat system and took the app to production. | Next.js · NestJS · Socket.IO · Prisma · PostgreSQL | [Live](https://pongmasters.obeaj.me) · [Video](https://youtu.be/sX8WaT4Rgtc) |
+| **[Leetube](https://github.com/BEAJousama/Leetube)** | Streams films from BitTorrent while they download (HTTP range responses, on-the-fly remux with FFmpeg), OAuth 42/Google. | React · Express · Prisma · PostgreSQL · FFmpeg | [Live](https://leetube.obeaj.me) · [Video](https://youtu.be/N-ohDCg3ij0) |
+| **[Red Tetris](https://github.com/BEAJousama/red-tetris)** | Multiplayer Tetris with an authoritative game server: every board runs server-side, shared seed per round. | React · TypeScript · Socket.IO | [Live](https://tetris.obeaj.me) |
+| **[MoralAi](https://github.com/BEAJousama/MoralAi)** | Workplace mental-health check-in companion with LLM chat and assessments (Gemini or local Llama). | React · Node.js · Ollama · Gemini | |
 
-### Backend & Infra
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![WebSockets](https://img.shields.io/badge/WebSockets-0B5FFF?style=flat-square)
+### Systems, infrastructure & security
 
----
-
-## 1337 School | 42 Network
-
-[![obeaj's 42 stats](https://badge.mediaplus.ma/black/obeaj)](https://github.com/oakoudad/badge42)
-
----
-
-## GitHub Stats
-
-<p align="start gap-16 justify-between">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=BEAJousama&theme=github_dark" height="160"/>
-  <img src="https://streak-stats.demolab.com?user=BEAJousama&hide_border=true" height="160"/>
-</p>
+| Project | What it is |
+|---|---|
+| **[kfs_2](https://github.com/BEAJousama/kfs_2)** | i386 kernel from scratch: GDT, IDT, IRQ handlers, keyboard driver, debug shell (C, NASM) |
+| **[rainfall](https://github.com/BEAJousama/rainfall)** · **[override](https://github.com/BEAJousama/override)** | Binary exploitation & reverse engineering: stack overflows, format strings, shellcode, ROP, with writeups |
+| **[beaj-shell](https://github.com/BEAJousama/beaj-shell)** | Unix shell in C: lexer → parser → executor, pipes, redirections, heredocs |
+| **[websrv](https://github.com/BEAJousama/websrv)** | HTTP/1.1 server in C++98 on a single `poll()` loop, chunked requests, CGI (team of 3) |
+| **[BADASS](https://github.com/BEAJousama/BADASS)** | BGP-EVPN / VXLAN data-center network in GNS3 with FRRouting |
+| **[inception](https://github.com/BEAJousama/inception)** · **[Cloud-I](https://github.com/BEAJousama/Cloud-I)** | Docker Compose infrastructure from my own images; Ansible provisioning on DigitalOcean |
 
 ---
 
-## Featured Projects
+### Tech
 
-### 🟢 Fleming.Watch — Production Website
-> CMS-powered product website with performance-first architecture
+**Languages** TypeScript, JavaScript, C, C++, SQL, Bash
+**Web** React, Next.js, Tailwind CSS, Node.js, NestJS, Express, Socket.IO, PostgreSQL, Prisma, Redis
+**Infra** Linux, Docker, Kubernetes (K3s), Argo CD, Nginx, Caddy, GitLab CI/CD, Vercel
+**Systems** POSIX, sockets, processes, threads, TCP/IP, HTTP/1.1, gdb
 
-- Next.js + CMS
-- Focus on UX, animations, maintainability
-
-🌐 https://fleming.watch  
-
----
-
-### 🔴 Red Tetris — Real-time Multiplayer Game
-> Competitive Tetris with live battles & game mechanics
-
-- WebSockets real-time engine  
-- Game logic + matchmaking  
-- Leaderboard system  
-
-🌐 https://tetr.obeaj.me  
-💻 https://github.com/BEAJousama/red-tetris  
-
----
-
-### 🟣 PongMasters — Fullstack Real-time Platform
-> Multi-user app with auth, chat, notifications, and game engine
-
-- Next.js + NestJS  
-- Auth system + chat + live updates  
-- Browser game integration  
-
-🎥 https://youtu.be/sX8WaT4Rgtc  
-💻 https://github.com/BEAJousama/ft_transcendence  
-
----
-
-### 🔵 Leetube — Dockerized Media Platform
-> Fullstack media app with external APIs & OAuth
-
-- 🐳 Dockerized environment  
-- API integrations  
-- Subtitle + media handling  
-
-🎥 https://youtu.be/N-ohDCg3ij0  
-💻 https://github.com/LeetSaaS-s/HyperTube-Frontend  
-
----
-
-### ⚫ WebServ — HTTP Server (C++)
-> Built from scratch to master HTTP & networking
-
-- HTTP parsing  
-- CGI/PHP execution  
-- Socket programming  
-
-💻 https://github.com/BEAJousama/websrv  
-
----
-
-## AI Journey
-
-![LLMs](https://img.shields.io/badge/LLMs-7C3AED?style=flat-square)
-![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-06B6D4?style=flat-square)
-![RAG](https://img.shields.io/badge/RAG-22C55E?style=flat-square)
-![LangChain](https://img.shields.io/badge/LangChain-F59E0B?style=flat-square)
-![Vector DB](https://img.shields.io/badge/Vector%20DBs-EF4444?style=flat-square)
-
----
-
-## Contact
-
-- 📧 **beajousama@gmail.com**
-- 🌐 https://obeaj.me
-- 💼 https://www.linkedin.com/in/ousama-beaj/
-
----
-
-<div align="center">
-
-### “I build systems, not just interfaces.”
-
-</div>
+English (professional) · French (fluent) · Arabic (native)
