@@ -23,17 +23,12 @@ LOGO = "ob"
 TAGLINE = "Software engineer: fullstack, systems & security, in production."
 DOMAIN = "obeaj.me"
 PILLS = [("fullstack", "blue"), ("systems & kernels", "amber"),
-         ("security", "purple"), ("open to PFE", "red")]
+         ("security", "purple"), ("AI", "red")]
 LINKS = [  # file, label, color, icon
     ("portfolio", "obeaj.me", "#e8553d", "globe"),
     ("linkedin", "LinkedIn", "#0a66c2", "in"),
     ("email", "ousama@obeaj.me", "#3fb950", "mail"),
     ("blog", "blog.obeaj.me", "#a371f7", "pen"),
-]
-FIXED_TILES = [  # big, sub, color (live contributions tile is added first)
-    ("16 months", "in production,\nFutureCorp Paris", "green"),
-    ("20.43", "level at 1337 / 42,\nRNCP 7 title", "amber"),
-    ("3 apps", "live in production,\nself-hosted", "purple"),
 ]
 
 # ---- palette (matches the reference design) ---------------------------------
@@ -95,10 +90,24 @@ def fetch():
       contributionsCollection {{ contributionCalendar {{ totalContributions
         weeks {{ contributionDays {{ date contributionCount }} }} }} }}
       repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {{
-        totalCount nodes {{ stargazerCount }} }} }} }}''')["user"]
+        totalCount nodes {{ stargazerCount languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
+          edges {{ size node {{ name }} }} }} }} }} }} }}''')["user"]
     cal = u["contributionsCollection"]["contributionCalendar"]
     days = [(d["date"], d["contributionCount"]) for w in cal["weeks"] for d in w["contributionDays"]]
+    since = int(u["createdAt"][:4])
+    years = "".join(
+        f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y}-12-31T23:59:59Z") '
+        '{ contributionCalendar { totalContributions } } '
+        for y in range(since, dt.date.today().year + 1))
+    per_year = gql(f'{{ user(login: "{USER}") {{ {years} }} }}')["user"]
+    langs = {}
+    for n in u["repositories"]["nodes"]:
+        for e in n["languages"]["edges"]:
+            langs[e["node"]["name"]] = langs.get(e["node"]["name"], 0) + e["size"]
     return {
+        "all_time": sum(v["contributionCalendar"]["totalContributions"] for v in per_year.values()),
+        "active": sum(1 for _, c in days if c),
+        "top_lang": max(langs, key=langs.get) if langs else "-",
         "total": cal["totalContributions"],
         "days": days,
         "repos": u["repositories"]["totalCount"],
@@ -162,7 +171,8 @@ def link_pill(label, color, icon):
 
 
 def big_tile(x, y, w, h, color, big, sub, icon):
-    t = [f'  <text x="{x+18}" y="{y+52}" class="b" font-size="26" fill="#ffffff">{escape(big)}</text>']
+    fs = min(26, (w - 54) / (0.61 * len(big)))  # shrink long values (e.g. a language name) to clear the icon
+    t = [f'  <text x="{x+18}" y="{y+52}" class="b" font-size="{fs:.1f}" fill="#ffffff">{escape(big)}</text>']
     for i, line in enumerate(sub.split("\n")):
         t.append(f'  <text x="{x+18}" y="{y+80+i*18}" font-size="13" fill="#e6edf3" opacity=".92">{escape(line)}</text>')
     t.append(f'  <g transform="translate({x+w-26} {y+22})">{icon}</g>')
@@ -184,9 +194,10 @@ def stats(d):
     w, h = 880, 330
     b = [f'  <text x="32" y="50" class="b" font-size="24" fill="#f0f6fc">On GitHub</text>',
          f'  <text x="{w-32}" y="48" text-anchor="end" font-size="13" fill="#8b949e">refreshes every night · {dt.date.today().strftime("%d %b %Y")}</text>']
-    tiles = [(f"{d['total']:,}", "contributions in\nthe last year", "blue", "cal")]
-    icons = ["flame", "trophy", "bars"]
-    tiles += [(big, sub, c, icons[i]) for i, (big, sub, c) in enumerate(FIXED_TILES)]
+    tiles = [(f"{d['total']:,}", "contributions in\nthe last year", "blue", "cal"),
+             (f"{d['active']} days", "with commits in\nthe last year", "green", "flame"),
+             (f"{d['all_time']:,}", f"contributions\nsince {d['since']}", "amber", "trophy"),
+             (d["top_lang"], "most-written\nlanguage", "purple", "bars")]
     tw, gap, x0 = 190, 17, 32
     for i, (big, sub, c, ic) in enumerate(tiles):
         b.append(big_tile(x0 + i * (tw + gap), 78, tw, 130, c, big, sub, TILE_ICONS[ic]))
@@ -200,9 +211,9 @@ def stats(d):
                  f'  <text x="{x+52:.0f}" y="272" class="b" font-size="24" fill="#ffffff">{n}</text>\n'
                  f'  <text x="{x+52+cw(24)*len(str(n))+10:.0f}" y="270" class="b" font-size="14" fill="#c9d1d9">{label}</text>\n')
         b.append(tile(x, 236, sw, 52, "slate", inner))
-    label = (f"On GitHub: {d['total']} contributions in the last year. " +
-             " ".join(f"{a}: {s.replace(chr(10), ' ')}." for a, s, _ in FIXED_TILES) +
-             f" {d['repos']} public repos, {d['stars']} stars, {years} years on GitHub.")
+    label = (f"On GitHub: {d['total']} contributions in the last year, {d['active']} active days, "
+             f"{d['all_time']} contributions since {d['since']}, top language {d['top_lang']}, "
+             f"{d['repos']} public repos, {d['stars']} stars, {years} years on GitHub.")
     return frame(w, h, "\n".join(b), label)
 
 
@@ -365,7 +376,7 @@ def ping(host):
 
 def now_terminal():
     w, lh, top = 880, 34, 92
-    rows = len(NOW) + 1
+    rows = len(NOW)
     h = top + rows * lh + 70
     up = {a: ping(f"{a}.obeaj.me") for a in LIVE_APPS}
     n_up = sum(up.values())
@@ -406,15 +417,7 @@ def now_terminal():
         g.append(f'  <g class="l" {delay(i+1)}><rect x="32" y="{y-17}" width="{tagw:.0f}" height="24" rx="6" fill="{bg}"/>'
                  f'<text x="{32+tagw/2:.0f}" y="{y}" text-anchor="middle" class="b" font-size="13" style="fill:{fg}">{tag}</text>'
                  f'<text x="{32+tagw+16:.0f}" y="{y}"><tspan class="wh">{escape(main)}</tspan><tspan class="dim">  ·  {escape(detail)}</tspan></text></g>')
-    # live apps row
-    y = top + 22 + len(NOW) * lh
-    bg, fg = ("#1f4a2c", "#aff5b4")
-    apps = "".join(
-        f'<tspan style="fill:{"#3fb950" if up[a] else "#f85149"}">● </tspan><tspan class="wh">{a}</tspan><tspan class="dim">.obeaj.me   </tspan>'
-        for a in LIVE_APPS)
-    g.append(f'  <g class="l" {delay(len(NOW)+1)}><rect x="32" y="{y-17}" width="{tagw:.0f}" height="24" rx="6" fill="{bg}"/>'
-             f'<text x="{32+tagw/2:.0f}" y="{y}" text-anchor="middle" class="b" font-size="13" style="fill:{fg}">LIVE</text>'
-             f'<text x="{32+tagw+16:.0f}" y="{y}">{apps}</text></g>')
+    y = top + 22 + (len(NOW) - 1) * lh
     y2 = y + 46
     g.append(prompt(y2, "./hire --me", "").replace('class="l "', f'class="l" {delay(rows+1)}'))
     cx_ = 32 + cw(15) * len("obeaj@1337:~$ ./hire --me ") 
@@ -422,7 +425,7 @@ def now_terminal():
 
     body = f"  <style>{css}\n  </style>\n" + "\n".join(g)
     label = "./now: " + "; ".join(f"{t.lower()} {m} ({d})" for t, _, m, d in NOW) + \
-        "; live: " + ", ".join(f"{a}.obeaj.me {'online' if up[a] else 'down'}" for a in LIVE_APPS)
+        f"; {n_up} of {len(LIVE_APPS)} live apps online"
     svg = frame(w, h, body, label)
     return svg.replace("<style>text { font-family", "<style>text.x { font-family", 1)
 
@@ -433,7 +436,6 @@ SCHOOL = {
     "school": "1337 Coding School · 42 Network",
     "level": 20.43, "max_level": 21,
     "pills": [("RNCP 7 · master's level", "purple"), ("common core 100%", "amber"), ("final year", "red")],
-    "skills": ["C", "C++", "Unix", "kernel", "networks", "security", "web", "DevOps"],
 }
 TEAL = "#00babc"
 
@@ -441,7 +443,7 @@ TEAL = "#00babc"
 def school_card():
     import base64
     photo = base64.b64encode((OUT.parent / "img" / "avatar.jpg").read_bytes()).decode()
-    w, h = 880, 214
+    w, h = 880, 206
     S = SCHOOL
     css = """
     .fill { transform-origin: 0 0; transform: scaleX(0); animation: grow 2.2s .4s cubic-bezier(.2,.8,.2,1) forwards; }
@@ -482,16 +484,40 @@ def school_card():
     g.append(f'  <g clip-path="url(#lb)"><rect class="fill" x="{x}" y="{by}" width="{fw:.0f}" height="26" fill="{TEAL}"/>'
              f'<rect class="shine" x="{x}" y="{by}" width="60" height="26" fill="#ffffff" fill-opacity=".22"/></g>')
     g.append(f'  <text x="{x + bw/2:.0f}" y="{by+18}" text-anchor="middle" class="b" font-size="13" fill="#0d1117">level {lvl} — {pct}%</text>')
-    # skills
-    sx = x
-    for sk in S["skills"]:
-        sw = cw(12) * len(sk) + 16
-        g.append(f'  <rect x="{sx}" y="178" width="{sw:.0f}" height="22" rx="5" fill="#1f3442" stroke="#2f4d60"/>'
-                 f'<text x="{sx+sw/2:.0f}" y="193" text-anchor="middle" font-size="12" fill="#c9d1d9">{escape(sk)}</text>')
-        sx += sw + 6
     label = (f"{S['name']} (@{S['login']}), {S['school']}. Level {S['level']} of {S['max_level']}. "
-             + ", ".join(p for p, _ in S["pills"]) + ". Skills: " + ", ".join(S["skills"]))
-    return frame(w, h + 6, "\n".join(g), label)
+             + ", ".join(p for p, _ in S["pills"]) + ".")
+    return frame(w, h, "\n".join(g), label)
+
+
+# ---- about (experience + how I work) --------------------------------------------
+ABOUT = [  # tag, color, title, body
+    ("EXPERIENCE", "blue", "FutureCorp · Paris (remote) · 16 months",
+     "Main engineer on CMS-driven Next.js platforms for Beige Pill and Fleming Watch. "
+     "Maintained sites for Saatchi & Saatchi UK and The Brooklyn Tower."),
+    ("HOW I WORK", "amber", "Fullstack, end to end",
+     "I build full-stack systems and run them myself in production on cloud VMs: "
+     "Caddy, Nginx, TLS, Docker, PostgreSQL. 3 apps live today."),
+]
+
+
+def about_card():
+    import textwrap
+    w, h = 880, 252
+    g = [f'  <text x="32" y="50"><tspan font-size="22" class="b" fill="#22d3ee">~/</tspan>'
+         f'<tspan font-size="22" class="b" fill="#f0f6fc">about</tspan></text>']
+    tw, gap = (w - 64 - 20) / 2, 20
+    for i, (tag, c, title, body) in enumerate(ABOUT):
+        x = 32 + i * (tw + gap)
+        bg, fg = PILL[c]
+        pw = cw(12) * len(tag) + 20
+        inner = [f'  <rect x="{x+18:.0f}" y="92" width="{pw:.0f}" height="22" rx="5" fill="{bg}"/>'
+                 f'<text x="{x+18+pw/2:.0f}" y="107" text-anchor="middle" class="b" font-size="12" fill="{fg}">{tag}</text>',
+                 f'  <text x="{x+18:.0f}" y="138" class="b" font-size="14" fill="#f0f6fc">{escape(title)}</text>']
+        for j, line in enumerate(textwrap.wrap(body, 44)[:4]):
+            inner.append(f'  <text x="{x+18:.0f}" y="{162 + j*19}" font-size="13" fill="#c9d1d9">{escape(line)}</text>')
+        g.append(tile(x, 76, tw, 152, "slate", "\n".join(inner) + "\n"))
+    label = "About. " + " ".join(f"{t}: {ti}. {b}" for t, _, ti, b in ABOUT)
+    return frame(w, h, "\n".join(g), label)
 
 
 def main():
@@ -504,6 +530,7 @@ def main():
     (OUT / "heatmap.svg").write_text(heatmap(d))
     (OUT / "now.svg").write_text(now_terminal())
     (OUT / "school.svg").write_text(school_card())
+    (OUT / "about.svg").write_text(about_card())
     print(f"wrote {OUT} · {d['total']} contributions, {d['repos']} repos, {d['stars']} stars")
 
 

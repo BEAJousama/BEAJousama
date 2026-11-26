@@ -1,27 +1,19 @@
 <div align="center">
 
-<img src="assets/gh/hero.svg" width="100%" alt="Hi, I'm Ousama. Software engineer: fullstack, systems and security, in production. Open to a PFE internship." />
+<img src="assets/gh/hero.svg" width="100%" alt="Hi, I'm Ousama. Software engineer: fullstack, systems, security and AI." />
 
 <a href="https://obeaj.me"><img src="assets/gh/link-portfolio.svg" alt="Portfolio: obeaj.me"/></a>
 <a href="https://www.linkedin.com/in/ousama-beaj/"><img src="assets/gh/link-linkedin.svg" alt="LinkedIn"/></a>
 <a href="mailto:ousama@obeaj.me"><img src="assets/gh/link-email.svg" alt="Email: ousama@obeaj.me"/></a>
 <a href="https://blog.obeaj.me"><img src="assets/gh/link-blog.svg" alt="Blog: blog.obeaj.me"/></a>
 
-<br/><br/>
-
-<img src="assets/gh/now.svg" width="100%" alt="./now: building a local AI security reviewer, learning AI from scratch, practicing DSA and system design, open to a 6-month PFE internship (remote or on-site, available now). Live apps: pongmasters, leetube and tetris on obeaj.me." />
-
-<img src="assets/gh/stats.svg" width="100%" alt="On GitHub: contributions, production experience, 1337 level, live apps, repos and stars" />
-
-<img src="assets/gh/heatmap.svg" width="100%" alt="Contribution heatmap for the last 6 months, eaten by a snake" />
-
 </div>
 
----
+<img src="assets/gh/now.svg" width="100%" alt="./now: building a local AI security reviewer, learning AI from scratch, practicing DSA and system design, open to a 6-month PFE internship (remote or on-site, available now)." />
 
-<img src="assets/cards/about.svg" width="100%" alt="About: 16 months of production experience at FutureCorp Paris (Beige Pill, Fleming Watch, Saatchi & Saatchi UK, The Brooklyn Tower). Final year at 1337 / 42 Network, level 20.43, RNCP 7: x86 kernel, Unix shell, HTTP server, binary exploitation, BGP-EVPN, Kubernetes. Builds full-stack systems and runs them in production."/>
+<img src="assets/gh/about.svg" width="100%" alt="About. Experience: FutureCorp Paris (remote), 16 months, main engineer on CMS-driven Next.js platforms for Beige Pill and Fleming Watch, maintained sites for Saatchi and Saatchi UK and The Brooklyn Tower. How I work: full-stack systems I run myself in production on cloud VMs (Caddy, Nginx, TLS, Docker, PostgreSQL), 3 apps live." />
 
-<img src="assets/gh/school.svg" width="100%" alt="Ousama Beaj (@obeaj), 1337 Coding School, 42 Network: level 20.43 of 21, RNCP 7 master's level, common core 100%, final year. Skills: C, C++, Unix, kernel, networks, security, web, DevOps."/>
+<img src="assets/gh/school.svg" width="100%" alt="Ousama Beaj (@obeaj), 1337 Coding School, 42 Network: level 20.43 of 21, RNCP 7 master's level, common core 100%, final year." />
 
 ### Featured projects
 
@@ -51,7 +43,9 @@
 
 <p align="center"><sub>More: <a href="https://github.com/BEAJousama/kfs_2">kfs_2</a> · <a href="https://github.com/BEAJousama/override">override</a> · <a href="https://github.com/BEAJousama/Cloud-I">Cloud-I</a> · <a href="https://github.com/BEAJousama/cv-builder">cv-builder</a> · <a href="https://github.com/BEAJousama/miniRT">miniRT</a> · <a href="https://github.com/BEAJousama/ft_containers">ft_containers</a></sub></p>
 
----
+<img src="assets/gh/stats.svg" width="100%" alt="On GitHub: contributions in the last year, active days, all-time contributions, top language, public repos, stars and years on GitHub. Refreshed every night." />
+
+<img src="assets/gh/heatmap.svg" width="100%" alt="Contribution heatmap for the last 6 months, eaten by a snake" />
 
 ### Tech
 

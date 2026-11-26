@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img" aria-label="Hi, I&#x27;m Ousama. Software engineer: fullstack, systems &amp; security, in production. fullstack, systems &amp; kernels, security, open to PFE">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img" aria-label="Hi, I&#x27;m Ousama. Software engineer: fullstack, systems &amp; security, in production. fullstack, systems &amp; kernels, security, AI">
   <defs>
     <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#252c47"/></pattern>
   </defs>
@@ -20,7 +20,7 @@
   <text x="341" y="176" text-anchor="middle" class="b" font-size="13" fill="#ffd9a0">systems &amp; kernels</text>
   <rect x="430.18" y="158" width="87" height="26" rx="6" fill="#4a3a85"/>
   <text x="474" y="176" text-anchor="middle" class="b" font-size="13" fill="#e0d4ff">security</text>
-  <rect x="527.62" y="158" width="111" height="26" rx="6" fill="#7a2335"/>
-  <text x="583" y="176" text-anchor="middle" class="b" font-size="13" fill="#ffd0d8">open to PFE</text>
+  <rect x="527.62" y="158" width="40" height="26" rx="6" fill="#7a2335"/>
+  <text x="548" y="176" text-anchor="middle" class="b" font-size="13" fill="#ffd0d8">AI</text>
   <g transform="rotate(-4 789 46)"><rect x="743" y="34" width="101" height="34" rx="6" fill="#5c1d12"/><rect x="739" y="30" width="101" height="34" rx="6" fill="#e8553d"/><text x="789" y="52" text-anchor="middle" class="b" font-size="15" fill="#fff">obeaj.me</text></g>
 </svg>
