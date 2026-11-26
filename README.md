@@ -13,7 +13,7 @@
 
 <img src="assets/gh/stats.svg" width="100%" alt="On GitHub: contributions, production experience, 1337 level, live apps, repos and stars" />
 
-<img src="assets/gh/heatmap.svg" width="100%" alt="Contribution heatmap for the last 6 months" />
+<img src="assets/gh/heatmap.svg" width="100%" alt="Contribution heatmap for the last year, eaten by a snake" />
 
 </div>
 
