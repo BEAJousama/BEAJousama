@@ -63,7 +63,7 @@ English (professional) · French (fluent) · Arabic (native)
 
 ---
 
-<img src="assets/42.svg" width="100%" alt="1337 Coding School, 42 Network: level 20.43, common core 100%, RNCP level 7"/>
+<img src="assets/gh/school.svg" width="100%" alt="Ousama Beaj (@obeaj), 1337 Coding School, 42 Network: level 20.43 of 21, RNCP 7 master's level, common core 100%, final year. Skills: C, C++, Unix, kernel, networks, security, web, DevOps."/>
 
 <br/>
 

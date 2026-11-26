@@ -427,6 +427,73 @@ def now_terminal():
     return svg.replace("<style>text { font-family", "<style>text.x { font-family", 1)
 
 
+# ---- 1337 / 42 card (intra style) ----------------------------------------------
+SCHOOL = {
+    "name": "Ousama Beaj", "login": "obeaj",
+    "school": "1337 Coding School · 42 Network",
+    "level": 20.43, "max_level": 21,
+    "pills": [("RNCP 7 · master's level", "purple"), ("common core 100%", "amber"), ("final year", "red")],
+    "skills": ["C", "C++", "Unix", "kernel", "networks", "security", "web", "DevOps"],
+}
+TEAL = "#00babc"
+
+
+def school_card():
+    import base64
+    photo = base64.b64encode((OUT.parent / "img" / "avatar.jpg").read_bytes()).decode()
+    w, h = 880, 214
+    S = SCHOOL
+    css = """
+    .fill { transform-origin: 0 0; transform: scaleX(0); animation: grow 2.2s .4s cubic-bezier(.2,.8,.2,1) forwards; }
+    @keyframes grow { to { transform: scaleX(1); } }
+    .shine { animation: shine 3s 2.8s ease-in-out infinite; }
+    @keyframes shine { from { transform: translateX(-80px); } to { transform: translateX(660px); } }"""
+    g = [f"  <style>{css}\n  </style>",
+         '  <defs><clipPath id="ph"><rect x="32" y="32" width="150" height="150" rx="12"/></clipPath></defs>']
+    # photo tile with hard shadow + teal frame
+    g.append(f'  <rect x="38" y="38" width="150" height="150" rx="12" fill="#06302f"/>')
+    g.append(f'  <image x="32" y="32" width="150" height="150" clip-path="url(#ph)" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,{photo}"/>')
+    g.append(f'  <rect x="32" y="32" width="150" height="150" rx="12" fill="none" stroke="{TEAL}" stroke-width="2.5"/>')
+    # sticker
+    g.append(f'  <g transform="rotate(-4 796 46)"><rect x="752" y="34" width="104" height="32" rx="6" fill="#04403f"/>'
+             f'<rect x="748" y="30" width="104" height="32" rx="6" fill="{TEAL}"/>'
+             f'<text x="800" y="51" text-anchor="middle" class="b" font-size="15" fill="#0d1117">42 · 1337</text></g>')
+    x = 212
+    # name + login
+    g.append(f'  <text x="{x}" y="62" class="b" font-size="28" fill="#f0f6fc">{escape(S["name"])}</text>')
+    lx = x + cw(28) * len(S["name"]) + 14
+    g.append(f'  <text x="{lx:.0f}" y="61" font-size="15" fill="{TEAL}">@{S["login"]}</text>')
+    g.append(f'  <text x="{x}" y="86" font-size="14" fill="#c9d1d9">{escape(S["school"])}</text>')
+    # pills
+    px = x
+    for text, c in S["pills"]:
+        bg, fg = PILL[c]
+        pw = cw(12) * len(text) + 20
+        g.append(f'  <rect x="{px}" y="100" width="{pw:.0f}" height="24" rx="6" fill="{bg}"/>'
+                 f'<text x="{px+pw/2:.0f}" y="116" text-anchor="middle" class="b" font-size="12" fill="{fg}">{escape(text)}</text>')
+        px += pw + 8
+    # level bar
+    bw, by = w - x - 32, 138
+    fw = bw * S["level"] / S["max_level"]
+    lvl, pct = int(S["level"]), round((S["level"] % 1) * 100)
+    g.append(f'  <rect x="{x+4}" y="{by+4}" width="{bw}" height="26" rx="7" fill="#0c0f1a"/>')
+    g.append(f'  <rect x="{x}" y="{by}" width="{bw}" height="26" rx="7" fill="#21283d" stroke="{PANEL_EDGE}"/>')
+    g.append(f'  <clipPath id="lb"><rect x="{x}" y="{by}" width="{fw:.0f}" height="26" rx="7"/></clipPath>')
+    g.append(f'  <g clip-path="url(#lb)"><rect class="fill" x="{x}" y="{by}" width="{fw:.0f}" height="26" fill="{TEAL}"/>'
+             f'<rect class="shine" x="{x}" y="{by}" width="60" height="26" fill="#ffffff" fill-opacity=".22"/></g>')
+    g.append(f'  <text x="{x + bw/2:.0f}" y="{by+18}" text-anchor="middle" class="b" font-size="13" fill="#0d1117">level {lvl} — {pct}%</text>')
+    # skills
+    sx = x
+    for sk in S["skills"]:
+        sw = cw(12) * len(sk) + 16
+        g.append(f'  <rect x="{sx}" y="178" width="{sw:.0f}" height="22" rx="5" fill="#1f3442" stroke="#2f4d60"/>'
+                 f'<text x="{sx+sw/2:.0f}" y="193" text-anchor="middle" font-size="12" fill="#c9d1d9">{escape(sk)}</text>')
+        sx += sw + 6
+    label = (f"{S['name']} (@{S['login']}), {S['school']}. Level {S['level']} of {S['max_level']}. "
+             + ", ".join(p for p, _ in S["pills"]) + ". Skills: " + ", ".join(S["skills"]))
+    return frame(w, h + 6, "\n".join(g), label)
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     d = fetch()
@@ -436,6 +503,7 @@ def main():
     (OUT / "stats.svg").write_text(stats(d))
     (OUT / "heatmap.svg").write_text(heatmap(d))
     (OUT / "now.svg").write_text(now_terminal())
+    (OUT / "school.svg").write_text(school_card())
     print(f"wrote {OUT} · {d['total']} contributions, {d['repos']} repos, {d['stars']} stars")
 
 
