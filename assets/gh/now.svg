@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="332" viewBox="0 0 880 332" role="img" aria-label="./now: build local AI security reviewer (LLM agent that reviews pull requests); learn AI from scratch (tokens, embeddings, attention, RAG, evals); practice DSA + system design (every morning); open 6-month PFE internship (remote or on-site, available now); live: pongmasters.obeaj.me online, leetube.obeaj.me online, tetris.obeaj.me online">
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#252c47"/></pattern>
+  </defs>
+  <style>text.x { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } .b { font-weight: 800; }</style>
+  <rect x="1" y="1" width="878" height="330" rx="14" fill="#161b2e" stroke="#2a3150" stroke-width="1.5"/>
+  <rect x="1" y="1" width="878" height="330" rx="14" fill="url(#dots)"/>
+  <style>
+    text { white-space: pre; font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 15px; fill: #c9d1d9; }
+    .b { font-weight: 800; } .dim { fill: #8b949e; } .wh { fill: #f0f6fc; font-weight: 700; }
+    .cy { fill: #22d3ee; } .ok { fill: #3fb950; }
+    .l { opacity: 0; animation: in .35s ease-out forwards; }
+    @keyframes in { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+    .bar { transform-origin: 0 0; transform: scaleX(0); animation: fill 3.4s .2s cubic-bezier(.4,0,.2,1) forwards; }
+    @keyframes fill { to { transform: scaleX(1); } }
+    .cursor { opacity: 0; animation: blink 1s 4.20s step-end infinite; }
+    @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+    .dot { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  </style>
+  <rect x="1" y="1" width="878" height="44" rx="14" fill="#1d2338"/><rect x="1" y="30" width="878" height="15" fill="#1d2338"/>
+  <rect x="1" y="45" width="878" height="2" fill="#2a3150"/>
+  <rect class="bar" x="1" y="45" width="878" height="2" fill="#22d3ee"/>
+  <circle cx="26" cy="23" r="6" fill="#ff5f57"/>
+  <circle cx="46" cy="23" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="23" r="6" fill="#28c840"/>
+  <text x="440.0" y="28" text-anchor="middle" font-size="13" class="dim">obeaj@1337 — ~/now</text>
+  <circle class="dot" cx="762" cy="23" r="4.5" fill="#3fb950"/><text x="774" y="28" font-size="13" class="b" style="fill:#3fb950">3/3 online</text>
+  <text class="l" style="animation-delay:0.30s" x="32" y="78"><tspan class="ok b">obeaj@1337</tspan><tspan class="dim">:</tspan><tspan class="cy">~</tspan><tspan class="dim">$ </tspan><tspan class="wh">./now --verbose</tspan></text>
+  <g class="l" style="animation-delay:0.85s"><rect x="32" y="97" width="85" height="24" rx="6" fill="#4a3a85"/><text x="75" y="114" text-anchor="middle" class="b" font-size="13" style="fill:#e0d4ff">BUILD</text><text x="133" y="114"><tspan class="wh">local AI security reviewer</tspan><tspan class="dim">  ·  LLM agent that reviews pull requests</tspan></text></g>
+  <g class="l" style="animation-delay:1.40s"><rect x="32" y="131" width="85" height="24" rx="6" fill="#1d4e89"/><text x="75" y="148" text-anchor="middle" class="b" font-size="13" style="fill:#cfe3ff">LEARN</text><text x="133" y="148"><tspan class="wh">AI from scratch</tspan><tspan class="dim">  ·  tokens, embeddings, attention, RAG, evals</tspan></text></g>
+  <g class="l" style="animation-delay:1.95s"><rect x="32" y="165" width="85" height="24" rx="6" fill="#7a4c12"/><text x="75" y="182" text-anchor="middle" class="b" font-size="13" style="fill:#ffd9a0">PRACTICE</text><text x="133" y="182"><tspan class="wh">DSA + system design</tspan><tspan class="dim">  ·  every morning</tspan></text></g>
+  <g class="l" style="animation-delay:2.50s"><rect x="32" y="199" width="85" height="24" rx="6" fill="#7a2335"/><text x="75" y="216" text-anchor="middle" class="b" font-size="13" style="fill:#ffd0d8">OPEN</text><text x="133" y="216"><tspan class="wh">6-month PFE internship</tspan><tspan class="dim">  ·  remote or on-site, available now</tspan></text></g>
+  <g class="l" style="animation-delay:3.05s"><rect x="32" y="233" width="85" height="24" rx="6" fill="#1f4a2c"/><text x="75" y="250" text-anchor="middle" class="b" font-size="13" style="fill:#aff5b4">LIVE</text><text x="133" y="250"><tspan style="fill:#3fb950">● </tspan><tspan class="wh">pongmasters</tspan><tspan class="dim">.obeaj.me   </tspan><tspan style="fill:#3fb950">● </tspan><tspan class="wh">leetube</tspan><tspan class="dim">.obeaj.me   </tspan><tspan style="fill:#3fb950">● </tspan><tspan class="wh">tetris</tspan><tspan class="dim">.obeaj.me   </tspan></text></g>
+  <text class="l" style="animation-delay:3.60s" x="32" y="296"><tspan class="ok b">obeaj@1337</tspan><tspan class="dim">:</tspan><tspan class="cy">~</tspan><tspan class="dim">$ </tspan><tspan class="wh">./hire --me</tspan></text>
+  <rect class="cursor" x="270" y="282" width="9" height="18" fill="#22d3ee"/>
+</svg>

@@ -344,6 +344,89 @@ def heatmap(d):
     return frame(w, h, "\n".join(b), f"{total} contributions in the last year, per-day heatmap, eaten by a snake")
 
 
+# ---- ./now terminal (the old boot log, restyled) -------------------------------
+LIVE_APPS = ["pongmasters", "leetube", "tetris"]  # *.obeaj.me, pinged every night
+NOW = [  # tag, color, main text, dim detail
+    ("BUILD", "purple", "local AI security reviewer", "LLM agent that reviews pull requests"),
+    ("LEARN", "blue", "AI from scratch", "tokens, embeddings, attention, RAG, evals"),
+    ("PRACTICE", "amber", "DSA + system design", "every morning"),
+    ("OPEN", "red", "6-month PFE internship", "remote or on-site, available now"),
+]
+
+
+def ping(host):
+    try:
+        req = urllib.request.Request(f"https://{host}", method="GET", headers={"User-Agent": "profile-cards"})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return r.status < 400
+    except Exception:
+        return False
+
+
+def now_terminal():
+    w, lh, top = 880, 34, 92
+    rows = len(NOW) + 1
+    h = top + rows * lh + 70
+    up = {a: ping(f"{a}.obeaj.me") for a in LIVE_APPS}
+    n_up = sum(up.values())
+    css = f"""
+    text {{ white-space: pre; font-family: {MONO}; font-size: 15px; fill: #c9d1d9; }}
+    .b {{ font-weight: 800; }} .dim {{ fill: #8b949e; }} .wh {{ fill: #f0f6fc; font-weight: 700; }}
+    .cy {{ fill: #22d3ee; }} .ok {{ fill: #3fb950; }}
+    .l {{ opacity: 0; animation: in .35s ease-out forwards; }}
+    @keyframes in {{ from {{ opacity: 0; transform: translateX(-6px); }} to {{ opacity: 1; transform: none; }} }}
+    .bar {{ transform-origin: 0 0; transform: scaleX(0); animation: fill {0.6 + rows * 0.55:.1f}s .2s cubic-bezier(.4,0,.2,1) forwards; }}
+    @keyframes fill {{ to {{ transform: scaleX(1); }} }}
+    .cursor {{ opacity: 0; animation: blink 1s {0.9 + (rows + 1) * 0.55:.2f}s step-end infinite; }}
+    @keyframes blink {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0; }} 100% {{ opacity: 0; }} }}
+    .dot {{ animation: pulse 2s ease-in-out infinite; }}
+    @keyframes pulse {{ 0%,100% {{ opacity: 1; }} 50% {{ opacity: .35; }} }}"""
+    g = []
+    # title bar
+    g.append(f'  <rect x="1" y="1" width="{w-2}" height="44" rx="14" fill="#1d2338"/><rect x="1" y="30" width="{w-2}" height="15" fill="#1d2338"/>')
+    g.append(f'  <rect x="1" y="45" width="{w-2}" height="2" fill="{PANEL_EDGE}"/>')
+    g.append(f'  <rect class="bar" x="1" y="45" width="{w-2}" height="2" fill="#22d3ee"/>')
+    for i, c in enumerate(["#ff5f57", "#febc2e", "#28c840"]):
+        g.append(f'  <circle cx="{26+i*20}" cy="23" r="6" fill="{c}"/>')
+    g.append(f'  <text x="{w/2}" y="28" text-anchor="middle" font-size="13" class="dim">obeaj@1337 — ~/now</text>')
+    status = "#3fb950" if n_up == len(LIVE_APPS) else "#e3b341"
+    g.append(f'  <circle class="dot" cx="{w-118}" cy="23" r="4.5" fill="{status}"/>'
+             f'<text x="{w-106}" y="28" font-size="13" class="b" style="fill:{status}">{n_up}/{len(LIVE_APPS)} online</text>')
+
+    def prompt(y, cmd, cls):
+        return (f'  <text class="l {cls}" x="32" y="{y}"><tspan class="ok b">obeaj@1337</tspan><tspan class="dim">:</tspan>'
+                f'<tspan class="cy">~</tspan><tspan class="dim">$ </tspan><tspan class="wh">{escape(cmd)}</tspan></text>')
+
+    delay = lambda i: f'style="animation-delay:{0.3 + i*0.55:.2f}s"'
+    g.append(prompt(top - 14, "./now --verbose", "").replace('class="l "', f'class="l" {delay(0)}'))
+    tagw = cw(13) * max(len(t) for t, *_ in NOW) + 22
+    for i, (tag, c, main, detail) in enumerate(NOW):
+        y = top + 22 + i * lh
+        bg, fg = PILL[c]
+        g.append(f'  <g class="l" {delay(i+1)}><rect x="32" y="{y-17}" width="{tagw:.0f}" height="24" rx="6" fill="{bg}"/>'
+                 f'<text x="{32+tagw/2:.0f}" y="{y}" text-anchor="middle" class="b" font-size="13" style="fill:{fg}">{tag}</text>'
+                 f'<text x="{32+tagw+16:.0f}" y="{y}"><tspan class="wh">{escape(main)}</tspan><tspan class="dim">  ·  {escape(detail)}</tspan></text></g>')
+    # live apps row
+    y = top + 22 + len(NOW) * lh
+    bg, fg = ("#1f4a2c", "#aff5b4")
+    apps = "".join(
+        f'<tspan style="fill:{"#3fb950" if up[a] else "#f85149"}">● </tspan><tspan class="wh">{a}</tspan><tspan class="dim">.obeaj.me   </tspan>'
+        for a in LIVE_APPS)
+    g.append(f'  <g class="l" {delay(len(NOW)+1)}><rect x="32" y="{y-17}" width="{tagw:.0f}" height="24" rx="6" fill="{bg}"/>'
+             f'<text x="{32+tagw/2:.0f}" y="{y}" text-anchor="middle" class="b" font-size="13" style="fill:{fg}">LIVE</text>'
+             f'<text x="{32+tagw+16:.0f}" y="{y}">{apps}</text></g>')
+    y2 = y + 46
+    g.append(prompt(y2, "./hire --me", "").replace('class="l "', f'class="l" {delay(rows+1)}'))
+    cx_ = 32 + cw(15) * len("obeaj@1337:~$ ./hire --me ") 
+    g.append(f'  <rect class="cursor" x="{cx_:.0f}" y="{y2-14}" width="9" height="18" fill="#22d3ee"/>')
+
+    body = f"  <style>{css}\n  </style>\n" + "\n".join(g)
+    label = "./now: " + "; ".join(f"{t.lower()} {m} ({d})" for t, _, m, d in NOW) + \
+        "; live: " + ", ".join(f"{a}.obeaj.me {'online' if up[a] else 'down'}" for a in LIVE_APPS)
+    svg = frame(w, h, body, label)
+    return svg.replace("<style>text { font-family", "<style>text.x { font-family", 1)
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     d = fetch()
@@ -352,6 +435,7 @@ def main():
         (OUT / f"link-{f}.svg").write_text(link_pill(label, color, icon))
     (OUT / "stats.svg").write_text(stats(d))
     (OUT / "heatmap.svg").write_text(heatmap(d))
+    (OUT / "now.svg").write_text(now_terminal())
     print(f"wrote {OUT} · {d['total']} contributions, {d['repos']} repos, {d['stars']} stars")
 
 

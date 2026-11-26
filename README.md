@@ -9,7 +9,7 @@
 
 <br/><br/>
 
-**🎯 Looking for a 6-month PFE internship — remote or on-site, available now**
+<img src="assets/gh/now.svg" width="100%" alt="./now: building a local AI security reviewer, learning AI from scratch, practicing DSA and system design, open to a 6-month PFE internship (remote or on-site, available now). Live apps: pongmasters, leetube and tetris on obeaj.me." />
 
 <img src="assets/gh/stats.svg" width="100%" alt="On GitHub: contributions, production experience, 1337 level, live apps, repos and stars" />
 
