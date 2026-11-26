@@ -207,7 +207,8 @@ def stats(d):
 
 
 SNAKE = ["#22d3ee", "#22d3ee", "#1fb8d0", "#1a9cb2", "#168196", "#11677a"]  # head → tail
-LOOP_TARGET = 32.0  # seconds for one full hunt; per-step speed adapts to the route length
+WEEKS = 26          # 6 months
+STEP = 0.14         # seconds per cell the snake moves (higher = slower)
 
 
 def lattice(a, b, rnd):
@@ -242,18 +243,18 @@ def snake_route(food, start, rnd):
 
 
 def heatmap(d):
-    """One year of contributions. A snake hunts the green cells on a random route
+    """Six months of contributions. A snake hunts the green cells on a random route
     (re-rolled every night), the total counts down as it eats, then it slides back
     to the start, the grid grows back, and it goes again forever.
     Pure SMIL on one master clock, so it loops inside GitHub's <img> rendering."""
     import random
-    days = d["days"][-52 * 7:]
+    days = d["days"][-WEEKS * 7:]
     while dt.date.fromisoformat(days[0][0]).weekday() != 6:  # weeks start on Sunday
         days = days[1:]
     cols = [days[i:i + 7] for i in range(0, len(days), 7)]
     total = sum(c for _, c in days)
     mx = max([c for _, c in days] + [1])
-    cell, gap, x0, y0 = 13, 2, 32, 96
+    cell, gap, x0, y0 = 26, 4, 36, 104
     pitch = cell + gap
     w = x0 * 2 + len(cols) * pitch - gap
     h = y0 + 7 * pitch + 50
@@ -264,7 +265,6 @@ def heatmap(d):
     food = [(ci, ri) for ci, col in enumerate(cols) for ri, (_, c) in enumerate(col) if c]
     route = snake_route(food, (0, 3), rnd)
     steps = len(route) - 1
-    STEP = min(0.09, max(0.035, LOOP_TARGET / max(steps, 1)))
     D = steps * STEP
     first = {}
     for i, p in enumerate(route):
@@ -289,7 +289,7 @@ def heatmap(d):
             sets += f'<set attributeName="visibility" to="hidden" begin="{T(b_)}" dur="{max(D-b_, 0.001):.3f}s"/>'
         b.append(f'  <text x="{x0}" y="50" class="b" font-size="22" fill="#f0f6fc" visibility="{"visible" if i == 0 else "hidden"}">{val:,}{sets}</text>')
     lx = x0 + cw(22) * len(f"{total:,}") + 10
-    b.append(f'  <text x="{lx:.0f}" y="50" font-size="15" fill="#c9d1d9">contributions in the last year</text>')
+    b.append(f'  <text x="{lx:.0f}" y="50" font-size="15" fill="#c9d1d9">contributions in the last 6 months</text>')
 
     starts = []  # (column, month) where a month begins; drop a label squeezed by the next one
     for ci, col in enumerate(cols):
@@ -306,19 +306,19 @@ def heatmap(d):
             y = y0 + ri * pitch
             lvl = 0 if c == 0 else min(4, 1 + int(3 * (c / mx) ** 0.5 + 0.5))
             fg = "#5c6470" if lvl == 0 else ("#0d1117" if lvl == 4 else "#e6edf3")
-            fs = 7.5 if c < 100 else 6
-            ty = y + cell / 2 + 2.6
+            fs = 10 if c < 100 else 8
+            ty = y + cell / 2 + 3.5
             if c:
                 t = first[(ci, ri)] * STEP
                 eat = f'begin="{T(t)}" dur="{max(D-t, 0.001):.3f}s"'
-                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" fill="{HEAT[lvl]}">'
+                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{HEAT[lvl]}">'
                          f'<set attributeName="fill" to="{HEAT[0]}" {eat}/></rect>'
                          f'<text x="{x+cell/2}" y="{ty:.1f}" text-anchor="middle" class="b" font-size="{fs}" fill="{fg}">{c}'
                          f'<set attributeName="opacity" to="0" {eat}/></text>'
-                         f'<text x="{x+cell/2}" y="{ty:.1f}" text-anchor="middle" class="b" font-size="7.5" fill="#5c6470" opacity="0">0'
+                         f'<text x="{x+cell/2}" y="{ty:.1f}" text-anchor="middle" class="b" font-size="10" fill="#5c6470" opacity="0">0'
                          f'<set attributeName="opacity" to="1" {eat}/></text>')
             else:
-                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" fill="{HEAT[0]}"/>'
+                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{HEAT[0]}"/>'
                          f'<text x="{x+cell/2}" y="{ty:.1f}" text-anchor="middle" class="b" font-size="{fs}" fill="{fg}">0</text>')
 
     # snake: every segment rides the same closed route, k steps behind the head,
@@ -328,10 +328,10 @@ def heatmap(d):
         pts = closed[-k:] + closed[:-k] if k else closed
         pts = pts + [pts[0]]
         path = "M" + " L".join(f"{cx(c):.1f} {cy(r):.1f}" for c, r in pts)
-        sz = cell + 1 if k == 0 else cell - 2 - k * 0.6
-        eyes = ('<circle cx="-2.6" cy="-2.4" r="1.4" fill="#0d1117"/><circle cx="2.6" cy="-2.4" r="1.4" fill="#0d1117"/>'
+        sz = cell - 2 if k == 0 else cell - 6 - k
+        eyes = ('<circle cx="-4.5" cy="-4" r="2.3" fill="#0d1117"/><circle cx="4.5" cy="-4" r="2.3" fill="#0d1117"/>'
                 if k == 0 else "")
-        b.append(f'  <g><rect x="{-sz/2:.1f}" y="{-sz/2:.1f}" width="{sz:.1f}" height="{sz:.1f}" rx="{4 if k == 0 else 3}" fill="{SNAKE[k]}"/>{eyes}'
+        b.append(f'  <g><rect x="{-sz/2:.1f}" y="{-sz/2:.1f}" width="{sz:.1f}" height="{sz:.1f}" rx="{7 if k == 0 else 5}" fill="{SNAKE[k]}"/>{eyes}'
                  f'<animateMotion path="{path}" begin="clk.begin" dur="{D:.3f}s" calcMode="linear"/></g>')
 
     ly = h - 24
@@ -341,7 +341,7 @@ def heatmap(d):
     for i, c in enumerate(HEAT):
         b.append(f'  <rect x="{lx+36+i*16}" y="{ly-7}" width="12" height="12" rx="2.5" fill="{c}"/>')
     b.append(f'  <text x="{lx+36+5*16+4}" y="{ly+4}" font-size="12" fill="#8b949e">More</text>')
-    return frame(w, h, "\n".join(b), f"{total} contributions in the last year, per-day heatmap, eaten by a snake")
+    return frame(w, h, "\n".join(b), f"{total} contributions in the last 6 months, per-day heatmap, eaten by a snake")
 
 
 # ---- ./now terminal (the old boot log, restyled) -------------------------------
