@@ -206,7 +206,13 @@ def stats(d):
     return frame(w, h, "\n".join(b), label)
 
 
+SNAKE = ["#22d3ee", "#22d3ee", "#1fb8d0", "#1a9cb2", "#168196", "#11677a"]  # head → tail
+STEP, START, END = 0.09, 1.5, 3.0  # seconds per cell, pause before / after the run
+
+
 def heatmap(d):
+    """Contribution grid with a snake that eats every cell while the total counts down.
+    Pure SMIL on one master clock, so it loops inside GitHub's <img> rendering."""
     days = d["days"][-26 * 7:]
     # align to full weeks starting Sunday
     while dt.date.fromisoformat(days[0][0]).weekday() != 6:
@@ -215,9 +221,39 @@ def heatmap(d):
     total = sum(c for _, c in days)
     mx = max([c for _, c in days] + [1])
     cell, gap, x0, y0 = 26, 4, 36, 104
-    w = x0 * 2 + len(cols) * (cell + gap) - gap
-    h = y0 + 7 * (cell + gap) + 52
-    b = [f'  <text x="{x0}" y="50" class="b" font-size="22" fill="#f0f6fc">{total:,}<tspan font-weight="400" font-size="15" fill="#c9d1d9"> contributions in the last 6 months</tspan></text>']
+    pitch = cell + gap
+    w = x0 * 2 + len(cols) * pitch - gap
+    h = y0 + 7 * pitch + 52
+
+    # snake route: down column 0, up column 1, ... (boustrophedon, equal steps)
+    route = []
+    for ci, col in enumerate(cols):
+        rows = range(len(col)) if ci % 2 == 0 else range(len(col) - 1, -1, -1)
+        route += [(ci, ri) for ri in rows]
+    order = {rc: i for i, rc in enumerate(route)}
+    travel = (len(route) - 1) * STEP
+    D = START + travel + len(SNAKE) * STEP + END
+    T = lambda t: f"clk.begin+{t:.2f}s"
+
+    b = [f'  <rect width="0" height="0"><animate id="clk" attributeName="x" from="0" to="0" begin="0s;clk.end" dur="{D:.2f}s"/></rect>']
+
+    # count-down: one text per value, each visible only for its time window
+    eats = sorted((START + order[(ci, ri)] * STEP, c)
+                  for ci, col in enumerate(cols) for ri, (_, c) in enumerate(col) if c)
+    windows, left, t0 = [], total, 0.0
+    for t, c in eats:
+        windows.append((left, t0, t))
+        left, t0 = left - c, t
+    windows.append((0, t0, D))
+    for i, (val, a_, b_) in enumerate(windows):
+        vis = "visible" if i == 0 else "hidden"
+        b.append(f'  <text x="{x0}" y="50" class="b" font-size="22" fill="#f0f6fc" visibility="{vis}">{val:,}'
+                 f'<set attributeName="visibility" to="visible" begin="{T(a_)}" dur="{b_-a_:.2f}s"/>'
+                 + (f'<set attributeName="visibility" to="hidden" begin="{T(b_)}" dur="{D-b_:.2f}s"/>' if i == 0 else "")
+                 + '</text>')
+    lx = x0 + cw(22) * len(f"{total:,}") + 4
+    b.append(f'  <text x="{lx:.0f}" y="50" font-size="15" fill="#c9d1d9">contributions in the last 6 months</text>')
+
     starts = []  # (column, month) where a month begins; drop a label squeezed by the next one
     for ci, col in enumerate(cols):
         m = dt.date.fromisoformat(col[0][0]).strftime("%b")
@@ -225,15 +261,39 @@ def heatmap(d):
             starts.append((ci, m))
     starts = [s for i, s in enumerate(starts) if i + 1 == len(starts) or starts[i + 1][0] - s[0] >= 3]
     for ci, m in starts:
-        b.append(f'  <text x="{x0 + ci * (cell + gap)}" y="{y0-12}" font-size="13" fill="#8b949e">{m}</text>')
+        b.append(f'  <text x="{x0 + ci * pitch}" y="{y0-12}" font-size="13" fill="#8b949e">{m}</text>')
+
     for ci, col in enumerate(cols):
-        x = x0 + ci * (cell + gap)
+        x = x0 + ci * pitch
         for ri, (_, c) in enumerate(col):
-            y = y0 + ri * (cell + gap)
+            y = y0 + ri * pitch
             lvl = 0 if c == 0 else min(4, 1 + int(3 * (c / mx) ** 0.5 + 0.5))
             fg = "#6e7681" if lvl == 0 else ("#0d1117" if lvl == 4 else "#e6edf3")
-            b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{HEAT[lvl]}"/>'
-                     f'<text x="{x+cell/2}" y="{y+17}" text-anchor="middle" class="b" font-size="{10 if c < 100 else 8}" fill="{fg}">{c}</text>')
+            fs = 10 if c < 100 else 8
+            if c:
+                t = START + order[(ci, ri)] * STEP
+                eat = f'begin="{T(t)}" dur="{D-t:.2f}s"'
+                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{HEAT[lvl]}">'
+                         f'<set attributeName="fill" to="{HEAT[0]}" {eat}/></rect>'
+                         f'<text x="{x+cell/2}" y="{y+17}" text-anchor="middle" class="b" font-size="{fs}" fill="{fg}">{c}'
+                         f'<set attributeName="fill" to="#6e7681" {eat}/><set attributeName="opacity" to="0" {eat}/></text>'
+                         f'<text x="{x+cell/2}" y="{y+17}" text-anchor="middle" class="b" font-size="10" fill="#6e7681" opacity="0">0'
+                         f'<set attributeName="opacity" to="1" {eat}/></text>')
+            else:
+                b.append(f'  <rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="4" fill="{HEAT[0]}"/>'
+                         f'<text x="{x+cell/2}" y="{y+17}" text-anchor="middle" class="b" font-size="{fs}" fill="{fg}">0</text>')
+
+    # the snake: segments follow the same route, each one step behind the previous
+    path = "M" + " L".join(f"{x0 + ci * pitch + cell / 2} {y0 + ri * pitch + cell / 2}" for ci, ri in route)
+    for k in reversed(range(len(SNAKE))):
+        sz = cell - 2 if k == 0 else cell - 6 - k
+        t = START + k * STEP
+        eyes = ('<circle cx="-4" cy="-4" r="2.2" fill="#0d1117"/><circle cx="4" cy="-4" r="2.2" fill="#0d1117"/>'
+                if k == 0 else "")
+        b.append(f'  <g opacity="0"><rect x="{-sz/2}" y="{-sz/2}" width="{sz}" height="{sz}" rx="{6 if k == 0 else 5}" fill="{SNAKE[k]}"/>{eyes}'
+                 f'<animateMotion path="{path}" begin="{T(t)}" dur="{travel:.2f}s"/>'
+                 f'<set attributeName="opacity" to="1" begin="{T(t)}" dur="{travel:.2f}s"/></g>')
+
     ly = h - 26
     b.append(f'  <text x="{x0}" y="{ly+4}" font-size="12" fill="#8b949e">contributions per day</text>')
     lx = w - x0 - 5 * 18 - 80
@@ -241,7 +301,7 @@ def heatmap(d):
     for i, c in enumerate(HEAT):
         b.append(f'  <rect x="{lx+38+i*18}" y="{ly-8}" width="14" height="14" rx="3" fill="{c}"/>')
     b.append(f'  <text x="{lx+38+5*18+4}" y="{ly+4}" font-size="12" fill="#8b949e">More</text>')
-    return frame(w, h, "\n".join(b), f"{total} contributions in the last 6 months, per day heatmap")
+    return frame(w, h, "\n".join(b), f"{total} contributions in the last 6 months, per day heatmap, eaten by a snake")
 
 
 def main():
