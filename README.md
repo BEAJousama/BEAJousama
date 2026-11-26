@@ -21,6 +21,8 @@
 
 <img src="assets/cards/about.svg" width="100%" alt="About: 16 months of production experience at FutureCorp Paris (Beige Pill, Fleming Watch, Saatchi & Saatchi UK, The Brooklyn Tower). Final year at 1337 / 42 Network, level 20.43, RNCP 7: x86 kernel, Unix shell, HTTP server, binary exploitation, BGP-EVPN, Kubernetes. Builds full-stack systems and runs them in production."/>
 
+<img src="assets/gh/school.svg" width="100%" alt="Ousama Beaj (@obeaj), 1337 Coding School, 42 Network: level 20.43 of 21, RNCP 7 master's level, common core 100%, final year. Skills: C, C++, Unix, kernel, networks, security, web, DevOps."/>
+
 ### Featured projects
 
 <p align="center">
@@ -60,10 +62,3 @@
 </p>
 
 English (professional) · French (fluent) · Arabic (native)
-
----
-
-<img src="assets/gh/school.svg" width="100%" alt="Ousama Beaj (@obeaj), 1337 Coding School, 42 Network: level 20.43 of 21, RNCP 7 master's level, common core 100%, final year. Skills: C, C++, Unix, kernel, networks, security, web, DevOps."/>
-
-<br/>
-
