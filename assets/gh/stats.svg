@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330" role="img" aria-label="On GitHub: 896 contributions in the last year. 16 months: in production, FutureCorp Paris. 20.43: level at 1337 / 42, RNCP 7 title. 3 apps: live in production, self-hosted. 26 public repos, 11 stars, 7 years on GitHub.">
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#252c47"/></pattern>
+  </defs>
+  <style>text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } .b { font-weight: 800; }</style>
+  <rect x="1" y="1" width="878" height="328" rx="14" fill="#161b2e" stroke="#2a3150" stroke-width="1.5"/>
+  <rect x="1" y="1" width="878" height="328" rx="14" fill="url(#dots)"/>
+  <text x="32" y="50" class="b" font-size="24" fill="#f0f6fc">On GitHub</text>
+  <text x="848" y="48" text-anchor="end" font-size="13" fill="#8b949e">refreshes every night · 26 Nov 2026</text>
+  <rect x="37" y="83" width="190" height="130" rx="10" fill="#0e2340"/>
+  <rect x="32" y="78" width="190" height="130" rx="10" fill="#2a5d93" stroke="#3d7cc0" stroke-width="1.5"/>
+  <text x="50" y="130" class="b" font-size="26" fill="#ffffff">896</text>
+  <text x="50" y="158" font-size="13" fill="#e6edf3" opacity=".92">contributions in</text>
+  <text x="50" y="176" font-size="13" fill="#e6edf3" opacity=".92">the last year</text>
+  <g transform="translate(196 100)"><rect x="-8" y="-7" width="16" height="14" rx="2" fill="#ff8a5c"/><rect x="-8" y="-7" width="16" height="4" fill="#d9542e"/></g>
+
+  <rect x="244" y="83" width="190" height="130" rx="10" fill="#10301b"/>
+  <rect x="239" y="78" width="190" height="130" rx="10" fill="#2e6b3f" stroke="#43905a" stroke-width="1.5"/>
+  <text x="257" y="130" class="b" font-size="26" fill="#ffffff">16 months</text>
+  <text x="257" y="158" font-size="13" fill="#e6edf3" opacity=".92">in production,</text>
+  <text x="257" y="176" font-size="13" fill="#e6edf3" opacity=".92">FutureCorp Paris</text>
+  <g transform="translate(403 100)"><path d="M0 -9 C5 -3 7 1 5 5 C3 9 -3 9 -5 5 C-7 1 -3 -2 0 -9 Z" fill="#ff8a5c"/></g>
+
+  <rect x="451" y="83" width="190" height="130" rx="10" fill="#3a240c"/>
+  <rect x="446" y="78" width="190" height="130" rx="10" fill="#87561f" stroke="#b0772f" stroke-width="1.5"/>
+  <text x="464" y="130" class="b" font-size="26" fill="#ffffff">20.43</text>
+  <text x="464" y="158" font-size="13" fill="#e6edf3" opacity=".92">level at 1337 / 42,</text>
+  <text x="464" y="176" font-size="13" fill="#e6edf3" opacity=".92">RNCP 7 title</text>
+  <g transform="translate(610 100)"><path d="M-6 -8 H6 V-2 C6 3 -6 3 -6 -2 Z" fill="#ffd166"/><rect x="-1.5" y="2" width="3" height="4" fill="#ffd166"/><rect x="-5" y="6" width="10" height="3" rx="1" fill="#ffd166"/></g>
+
+  <rect x="658" y="83" width="190" height="130" rx="10" fill="#231a44"/>
+  <rect x="653" y="78" width="190" height="130" rx="10" fill="#56428f" stroke="#7a62c4" stroke-width="1.5"/>
+  <text x="671" y="130" class="b" font-size="26" fill="#ffffff">3 apps</text>
+  <text x="671" y="158" font-size="13" fill="#e6edf3" opacity=".92">live in production,</text>
+  <text x="671" y="176" font-size="13" fill="#e6edf3" opacity=".92">self-hosted</text>
+  <g transform="translate(817 100)"><rect x="-8" y="0" width="4" height="8" fill="#ff8a5c"/><rect x="-2" y="-5" width="4" height="13" fill="#ff8a5c"/><rect x="4" y="-9" width="4" height="17" fill="#ff8a5c"/></g>
+
+  <rect x="37.0" y="241" width="258.6666666666667" height="52" rx="10" fill="#0c161d"/>
+  <rect x="32.0" y="236" width="258.6666666666667" height="52" rx="10" fill="#1f3442" stroke="#2f4d60" stroke-width="1.5"/>
+  <g transform="translate(60 263)"><path d="M-10 -6 H-3 L-1 -3 H10 V8 H-10 Z" fill="#e8763d"/></g>
+  <text x="84" y="272" class="b" font-size="24" fill="#ffffff">26</text>
+  <text x="123" y="270" class="b" font-size="14" fill="#c9d1d9">public repos</text>
+
+  <rect x="315.6666666666667" y="241" width="258.6666666666667" height="52" rx="10" fill="#0c161d"/>
+  <rect x="310.6666666666667" y="236" width="258.6666666666667" height="52" rx="10" fill="#1f3442" stroke="#2f4d60" stroke-width="1.5"/>
+  <g transform="translate(339 263)"><path d="M0 -9 L2.6 -2.8 L9 -2.8 L3.9 1.2 L5.8 8 L0 4 L-5.8 8 L-3.9 1.2 L-9 -2.8 L-2.6 -2.8 Z" fill="#ff6b6b"/></g>
+  <text x="363" y="272" class="b" font-size="24" fill="#ffffff">11</text>
+  <text x="402" y="270" class="b" font-size="14" fill="#c9d1d9">stars earned</text>
+
+  <rect x="594.3333333333334" y="241" width="258.6666666666667" height="52" rx="10" fill="#0c161d"/>
+  <rect x="589.3333333333334" y="236" width="258.6666666666667" height="52" rx="10" fill="#1f3442" stroke="#2f4d60" stroke-width="1.5"/>
+  <g transform="translate(617 263)"><circle cx="0" cy="0" r="9" fill="#3fb950"/><path d="M0 -5 V0 L4 3" stroke="#0d1117" stroke-width="2" fill="none"/></g>
+  <text x="641" y="272" class="b" font-size="24" fill="#ffffff">7</text>
+  <text x="666" y="270" class="b" font-size="14" fill="#c9d1d9">years on GitHub</text>
+
+</svg>

@@ -1,15 +1,19 @@
 <div align="center">
 
-<img src="assets/boot.svg" width="100%" alt="obeaj-os boot log: Ousama Beaj, software engineer, 1337 / 42 Network, fullstack and systems, looking for a 6-month PFE internship" />
+<img src="assets/gh/hero.svg" width="100%" alt="Hi, I'm Ousama. Software engineer: fullstack, systems and security, in production. Open to a PFE internship." />
 
-<br/>
+<a href="https://obeaj.me"><img src="assets/gh/link-portfolio.svg" alt="Portfolio: obeaj.me"/></a>
+<a href="https://www.linkedin.com/in/ousama-beaj/"><img src="assets/gh/link-linkedin.svg" alt="LinkedIn"/></a>
+<a href="mailto:ousama@obeaj.me"><img src="assets/gh/link-email.svg" alt="Email: ousama@obeaj.me"/></a>
+<a href="https://blog.obeaj.me"><img src="assets/gh/link-blog.svg" alt="Blog: blog.obeaj.me"/></a>
 
-<a href="https://obeaj.me"><img src="https://img.shields.io/badge/Portfolio-obeaj.me-22d3ee?style=for-the-badge&labelColor=0b0f17" alt="Portfolio"/></a>
-<a href="https://www.linkedin.com/in/ousama-beaj/"><img src="https://img.shields.io/badge/LinkedIn-ousama--beaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0b0f17" alt="LinkedIn"/></a>
-<a href="mailto:ousama@obeaj.me"><img src="https://img.shields.io/badge/Email-ousama%40obeaj.me-3fb950?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=0b0f17" alt="Email"/></a>
-<a href="https://blog.obeaj.me"><img src="https://img.shields.io/badge/Blog-blog.obeaj.me-f778ba?style=for-the-badge&labelColor=0b0f17" alt="Blog"/></a>
+<br/><br/>
 
 **🎯 Looking for a 6-month PFE internship — remote or on-site, available now**
+
+<img src="assets/gh/stats.svg" width="100%" alt="On GitHub: contributions, production experience, 1337 level, live apps, repos and stars" />
+
+<img src="assets/gh/heatmap.svg" width="100%" alt="Contribution heatmap for the last 6 months" />
 
 </div>
 
@@ -63,8 +67,3 @@ English (professional) · French (fluent) · Arabic (native)
 
 <br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake.svg" />
-  <img alt="Snake eating my GitHub contribution graph" src="https://raw.githubusercontent.com/BEAJousama/BEAJousama/output/snake-dark.svg" width="100%" />
-</picture>

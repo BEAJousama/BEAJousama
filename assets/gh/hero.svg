@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="230" viewBox="0 0 880 230" role="img" aria-label="Hi, I&#x27;m Ousama. Software engineer: fullstack, systems &amp; security, in production. fullstack, systems &amp; kernels, security, open to PFE">
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#252c47"/></pattern>
+  </defs>
+  <style>text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } .b { font-weight: 800; }</style>
+  <rect x="1" y="1" width="878" height="228" rx="14" fill="#161b2e" stroke="#2a3150" stroke-width="1.5"/>
+  <rect x="1" y="1" width="878" height="228" rx="14" fill="url(#dots)"/>
+  <rect x="41" y="45" width="92" height="92" rx="10" fill="#0c161d"/>
+  <rect x="36" y="40" width="92" height="92" rx="10" fill="#1f3442" stroke="#2f4d60" stroke-width="1.5"/>
+
+  <rect x="36" y="40" width="92" height="92" rx="12" fill="#f0f6fc"/>
+  <rect x="50" y="54" width="64" height="64" rx="8" fill="#0d1117"/>
+  <text x="82" y="97" text-anchor="middle" class="b" font-size="34" fill="#22d3ee">ob</text>
+  <rect x="370" y="54" width="188" height="58" rx="6" fill="#b4344d"/>
+  <text x="156" y="98" class="b" font-size="46" fill="#f0f6fc">Hi, I&#x27;m <tspan fill="#ffffff">Ousama</tspan></text>
+  <text x="156" y="136" font-size="16" fill="#c9d1d9">Software engineer: fullstack, systems &amp; security, in production.</text>
+  <rect x="156" y="158" width="95" height="26" rx="6" fill="#1d4e89"/>
+  <text x="204" y="176" text-anchor="middle" class="b" font-size="13" fill="#cfe3ff">fullstack</text>
+  <rect x="261.37" y="158" width="159" height="26" rx="6" fill="#7a4c12"/>
+  <text x="341" y="176" text-anchor="middle" class="b" font-size="13" fill="#ffd9a0">systems &amp; kernels</text>
+  <rect x="430.18" y="158" width="87" height="26" rx="6" fill="#4a3a85"/>
+  <text x="474" y="176" text-anchor="middle" class="b" font-size="13" fill="#e0d4ff">security</text>
+  <rect x="527.62" y="158" width="111" height="26" rx="6" fill="#7a2335"/>
+  <text x="583" y="176" text-anchor="middle" class="b" font-size="13" fill="#ffd0d8">open to PFE</text>
+  <g transform="rotate(-4 789 46)"><rect x="743" y="34" width="101" height="34" rx="6" fill="#5c1d12"/><rect x="739" y="30" width="101" height="34" rx="6" fill="#e8553d"/><text x="789" y="52" text-anchor="middle" class="b" font-size="15" fill="#fff">obeaj.me</text></g>
+</svg>
